@@ -1,0 +1,108 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Block and Inline Elements - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">HTML HOME</h3>
+            <ul class="sidebar-nav">
+                <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+                <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+                <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+                <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+                <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+                <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+                <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+                <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+                <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+                <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+                <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+                <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+                <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+                <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+                <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+                <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+                <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+                <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+                <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+                <li><a href="{{ url_for('main.html_block_inline') }}" class="active">HTML Block & Inline</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>HTML Block and Inline Elements</h1>
+        
+        <p>Every HTML element has a default display value, depending on what type of element it is.</p>
+        <p>There are two display values: <strong>block</strong> and <strong>inline</strong>.</p>
+        
+        <h2>Block-level Elements</h2>
+        <p>A block-level element always starts on a new line, and the browsers automatically add some space (margin) before and after the element.</p>
+        <p>A block-level element always takes up the full width available (stretches out to the left and right as far as it can).</p>
+        
+        <div class="tryit-example">
+            <h3>Two commonly used block elements are: &lt;p&gt; and &lt;div&gt;</h3>
+            <div class="code-example">
+                <pre><code>&lt;p&gt;Hello World&lt;/p&gt;
+&lt;div&gt;Hello World&lt;/div&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <p>Here are the block-level elements in HTML:</p>
+        <div class="code-example">
+            <pre><code>&lt;address&gt;&lt;article&gt;&lt;aside&gt;&lt;blockquote&gt;&lt;canvas&gt;&lt;dd&gt;&lt;div&gt;&lt;dl&gt;&lt;dt&gt;&lt;fieldset&gt;&lt;figcaption&gt;&lt;figure&gt;&lt;footer&gt;&lt;form&gt;&lt;h1&gt;-&lt;h6&gt;&lt;header&gt;&lt;hr&gt;&lt;li&gt;&lt;main&gt;&lt;nav&gt;&lt;noscript&gt;&lt;ol&gt;&lt;p&gt;&lt;pre&gt;&lt;section&gt;&lt;table&gt;&lt;tfoot&gt;&lt;ul&gt;&lt;video&gt;</code></pre>
+        </div>
+        
+        <h2>Inline Elements</h2>
+        <p>An inline element does not start on a new line.</p>
+        <p>An inline element only takes up as much width as necessary.</p>
+        
+        <div class="tryit-example">
+            <h3>This is a &lt;span&gt; element inside a paragraph.</h3>
+            <div class="code-example">
+                <pre><code>&lt;p&gt;This is an inline &lt;span&gt;hello world&lt;/span&gt; element inside a paragraph.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <p>Here are the inline elements in HTML:</p>
+        <div class="code-example">
+            <pre><code>&lt;a&gt;&lt;abbr&gt;&lt;acronym&gt;&lt;b&gt;&lt;bdo&gt;&lt;big&gt;&lt;br&gt;&lt;button&gt;&lt;cite&gt;&lt;code&gt;&lt;dfn&gt;&lt;em&gt;&lt;i&gt;&lt;img&gt;&lt;input&gt;&lt;kbd&gt;&lt;label&gt;&lt;map&gt;&lt;object&gt;&lt;output&gt;&lt;q&gt;&lt;samp&gt;&lt;script&gt;&lt;select&gt;&lt;small&gt;&lt;span&gt;&lt;strong&gt;&lt;sub&gt;&lt;sup&gt;&lt;textarea&gt;&lt;time&gt;&lt;tt&gt;&lt;var&gt;</code></pre>
+        </div>
+        
+        <h2>The &lt;div&gt; Element</h2>
+        <p>The <code>&lt;div&gt;</code> element is often used as a container for other HTML elements.</p>
+        <p>The <code>&lt;div&gt;</code> element has no required attributes, but <code>style</code>, <code>class</code> and <code>id</code> are common.</p>
+        
+        <div class="tryit-example">
+            <div class="code-example">
+                <pre><code>&lt;div style="background-color:black;color:white;padding:20px;"&gt;
+  &lt;h2&gt;London&lt;/h2&gt;
+  &lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>The &lt;span&gt; Element</h2>
+        <p>The <code>&lt;span&gt;</code> element is an inline container used to mark up a part of a text, or a part of a document.</p>
+        <p>The <code>&lt;span&gt;</code> element has no required attributes, but <code>style</code>, <code>class</code> and <code>id</code> are common.</p>
+        
+        <div class="tryit-example">
+            <div class="code-example">
+                <pre><code>&lt;p&gt;My mother has &lt;span style="color:blue;font-weight:bold;"&gt;blue&lt;/span&gt; eyes and my father has &lt;span style="color:darkolivegreen;font-weight:bold;"&gt;dark green&lt;/span&gt; eyes.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <div style="margin-top: 2rem;">
+            <a href="{{ url_for('main.html_lists') }}" class="btn btn-secondary">« Previous: HTML Lists</a>
+            <a href="{{ url_for('main.html_div') }}" class="btn btn-secondary">Next: HTML Div »</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

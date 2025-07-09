@@ -1,0 +1,59 @@
+
+{% extends "base.html" %}
+
+{% block title %}Python Introduction - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="lesson-content">
+    <h1>Python Introduction</h1>
+    
+    <h2>What is Python?</h2>
+    <p>Python is a popular programming language known for its simplicity and readability.</p>
+    
+    <h2>Python Syntax</h2>
+    <p>Python syntax is simple and easy to learn:</p>
+    
+    <pre><code>print("Hello, World!")</code></pre>
+    
+    <h2>Variables</h2>
+    <p>Python variables are created when you assign a value to them:</p>
+    
+    <pre><code>x = 5
+y = "Hello"
+z = 3.14</code></pre>
+    
+    <h2>Data Types</h2>
+    <ul>
+        <li><strong>int</strong> - Integer numbers</li>
+        <li><strong>float</strong> - Decimal numbers</li>
+        <li><strong>str</strong> - Text strings</li>
+        <li><strong>bool</strong> - True/False values</li>
+        <li><strong>list</strong> - Ordered collections</li>
+    </ul>
+    
+    <h2>Functions</h2>
+    <pre><code>def greet(name):
+    return f"Hello, {name}!"
+
+message = greet("World")
+print(message)</code></pre>
+    
+    <h2>Loops</h2>
+    <pre><code># For loop
+for i in range(5):
+    print(i)
+
+# While loop
+count = 0
+while count < 5:
+    print(count)
+    count += 1</code></pre>
+    
+    <div style="margin-top: 2rem;">
+        <a href="{{ url_for('main.css_intro') }}" class="btn btn-secondary">Previous: CSS Introduction</a>
+        {% if session.user_id %}
+            <a href="{{ url_for('main.python_quiz') }}" class="btn">Take Python Quiz</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

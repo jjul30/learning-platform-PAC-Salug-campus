@@ -1,0 +1,215 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Classes - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">HTML HOME</h3>
+            <ul class="sidebar-nav">
+                <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+                <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+                <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+                <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+                <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+                <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+                <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+                <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+                <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+                <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+                <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+                <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+                <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+                <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+                <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+                <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+                <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+                <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+                <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+                <li><a href="{{ url_for('main.html_block_inline') }}">HTML Block & Inline</a></li>
+                <li><a href="{{ url_for('main.html_div') }}">HTML Div</a></li>
+                <li><a href="{{ url_for('main.html_classes') }}" class="active">HTML Classes</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>HTML class Attribute</h1>
+        
+        <p>The HTML <code>class</code> attribute is used to specify a class for an HTML element.</p>
+        <p>Multiple HTML elements can share the same class.</p>
+        
+        <h2>Using The class Attribute</h2>
+        <p>The <code>class</code> attribute is often used to point to a class name in a style sheet. It can also be used by a JavaScript to access and manipulate elements with the specific class name.</p>
+        
+        <div class="tryit-example">
+            <h3>In the following example we have three &lt;div&gt; elements with a class attribute with the value of "city". All of the three &lt;div&gt; elements will be styled equally according to the .city style definition in the head section:</h3>
+            <div class="code-example">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.city {
+  background-color: tomato;
+  color: white;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div class="city"&gt;
+  &lt;h2&gt;London&lt;/h2&gt;
+  &lt;p&gt;London is the capital of England.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="city"&gt;
+  &lt;h2&gt;Paris&lt;/h2&gt;
+  &lt;p&gt;Paris is the capital of France.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="city"&gt;
+  &lt;h2&gt;Tokyo&lt;/h2&gt;
+  &lt;p&gt;Tokyo is the capital of Japan.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <div class="tryit-example">
+            <h3>In the following example we have two &lt;span&gt; elements with a class attribute with the value of "note". Both &lt;span&gt; elements will be styled equally according to the .note style definition in the head section:</h3>
+            <div class="code-example">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.note {
+  font-size: 120%;
+  color: red;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My &lt;span class="note"&gt;Important&lt;/span&gt; Heading&lt;/h1&gt;
+&lt;p&gt;This is some &lt;span class="note"&gt;important&lt;/span&gt; text.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <div class="note-section">
+            <p><strong>Tip:</strong> The <code>class</code> attribute can be used on <strong>any</strong> HTML element.</p>
+            <p><strong>Note:</strong> The class name is case sensitive!</p>
+        </div>
+        
+        <h2>The Syntax For Class</h2>
+        <p>To create a class; write a period (.) character, followed by a class name. Then, define the CSS properties within curly braces {}:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2 class="city"&gt;London&lt;/h2&gt;
+&lt;p&gt;London is the capital of England.&lt;/p&gt;
+
+&lt;h2 class="city"&gt;Paris&lt;/h2&gt;
+&lt;p&gt;Paris is the capital of France.&lt;/p&gt;
+
+&lt;h2 class="city"&gt;Tokyo&lt;/h2&gt;
+&lt;p&gt;Tokyo is the capital of Japan.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Multiple Classes</h2>
+        <p>HTML elements can belong to more than one class.</p>
+        <p>To define multiple classes, separate the class names with a space, e.g. <code>&lt;div class="city main"&gt;</code>. The element will be styled according to all the classes specified.</p>
+        
+        <div class="tryit-example">
+            <h3>In the following example, the first &lt;h2&gt; element belongs to both the city class and also to the main class, and will get the CSS styles from both of the classes:</h3>
+            <div class="code-example">
+                <pre><code>&lt;h2 class="city main"&gt;London&lt;/h2&gt;
+&lt;h2 class="city"&gt;Paris&lt;/h2&gt;
+&lt;h2 class="city"&gt;Tokyo&lt;/h2&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Different Elements Can Share Same Class</h2>
+        <p>Different HTML elements can point to the same class name.</p>
+        
+        <div class="tryit-example">
+            <h3>In the following example, both &lt;h2&gt; and &lt;p&gt; points to the "city" class and will share the same style:</h3>
+            <div class="code-example">
+                <pre><code>&lt;h2 class="city"&gt;Paris&lt;/h2&gt;
+&lt;p class="city"&gt;Paris is the capital of France&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Use of The class Attribute in JavaScript</h2>
+        <p>The class name can also be used by JavaScript to perform certain tasks for specific elements.</p>
+        <p>JavaScript can access elements with a specific class name with the <code>getElementsByClassName()</code> method:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;script&gt;
+function myFunction() {
+  var x = document.getElementsByClassName("city");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+}
+&lt;/script&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <div class="note-section">
+            <p><strong>Don't worry if you don't understand the code in the example above.</strong></p>
+            <p>You will learn more about JavaScript in our HTML JavaScript chapter, or you can study our JavaScript Tutorial.</p>
+        </div>
+        
+        <h2>Chapter Summary</h2>
+        <ul>
+            <li>The HTML <code>class</code> attribute specifies one or more class names for an element</li>
+            <li>Classes are used by CSS and JavaScript to select and access specific elements</li>
+            <li>The <code>class</code> attribute can be used on any HTML element</li>
+            <li>The class name is case sensitive</li>
+            <li>Different HTML elements can point to the same class name</li>
+            <li>JavaScript can access elements with a specific class name with the <code>getElementsByClassName()</code> method</li>
+        </ul>
+        
+        <div style="margin-top: 2rem;">
+            <a href="{{ url_for('main.html_div') }}" class="btn btn-secondary">« Previous: HTML Div</a>
+            <a href="{{ url_for('main.html_id') }}" class="btn btn-secondary">Next: HTML Id »</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

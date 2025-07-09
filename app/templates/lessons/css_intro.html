@@ -1,0 +1,54 @@
+
+{% extends "base.html" %}
+
+{% block title %}CSS Introduction - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="lesson-content">
+    <h1>CSS Introduction</h1>
+    
+    <h2>What is CSS?</h2>
+    <p>CSS stands for Cascading Style Sheets. It describes how HTML elements are to be displayed.</p>
+    
+    <h2>CSS Syntax</h2>
+    <p>A CSS rule consists of a selector and a declaration block:</p>
+    
+    <pre><code>selector {
+    property: value;
+    property: value;
+}</code></pre>
+    
+    <h2>CSS Example</h2>
+    <pre><code>h1 {
+    color: blue;
+    font-size: 24px;
+}
+
+p {
+    color: red;
+    font-family: Arial, sans-serif;
+}</code></pre>
+    
+    <h2>Three Ways to Add CSS</h2>
+    <ul>
+        <li><strong>Inline</strong> - using the style attribute inside HTML elements</li>
+        <li><strong>Internal</strong> - using a &lt;style&gt; element in the &lt;head&gt; section</li>
+        <li><strong>External</strong> - using a &lt;link&gt; element to link to an external CSS file</li>
+    </ul>
+    
+    <h2>CSS Selectors</h2>
+    <ul>
+        <li><code>element</code> - Selects all elements of that type</li>
+        <li><code>.class</code> - Selects elements with a specific class</li>
+        <li><code>#id</code> - Selects an element with a specific id</li>
+    </ul>
+    
+    <div style="margin-top: 2rem;">
+        <a href="{{ url_for('main.html_intro') }}" class="btn btn-secondary">Previous: HTML Introduction</a>
+        {% if session.user_id %}
+            <a href="{{ url_for('main.css_quiz') }}" class="btn">Take CSS Quiz</a>
+        {% endif %}
+        <a href="{{ url_for('main.python_intro') }}" class="btn btn-secondary">Next: Python Introduction</a>
+    </div>
+</div>
+{% endblock %}

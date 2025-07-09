@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+
+{% block title %}Python Quiz - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="quiz-container">
+    <h1>Python Quiz</h1>
+    <p>Test your Python knowledge!</p>
+    
+    <form method="POST">
+        <div class="question">
+            <h3>1. How do you print "Hello World" in Python?</h3>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="a"> print("Hello World")</li>
+                <li><input type="radio" name="q1" value="b"> echo("Hello World")</li>
+                <li><input type="radio" name="q1" value="c"> console.log("Hello World")</li>
+            </ul>
+        </div>
+        
+        <div class="question">
+            <h3>2. Which of the following is a correct variable name in Python?</h3>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="a"> 2name</li>
+                <li><input type="radio" name="q2" value="b"> my_name</li>
+                <li><input type="radio" name="q2" value="c"> my-name</li>
+            </ul>
+        </div>
+        
+        <div class="question">
+            <h3>3. How do you define a function in Python?</h3>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="a"> function myFunction():</li>
+                <li><input type="radio" name="q3" value="b"> def myFunction():</li>
+                <li><input type="radio" name="q3" value="c"> create myFunction():</li>
+            </ul>
+        </div>
+        
+        <button type="submit" class="btn">Submit Quiz</button>
+    </form>
+    
+    <div style="margin-top: 2rem;">
+        <a href="{{ url_for('main.python_intro') }}" class="btn btn-secondary">Back to Python Lesson</a>
+    </div>
+</div>
+{% endblock %}

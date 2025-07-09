@@ -1,0 +1,302 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Style Guide - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+            <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+            <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+            <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+            <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+            <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+            <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+            <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+            <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+            <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+            <li><a href="{{ url_for('main.html_block_inline') }}">HTML Block & Inline</a></li>
+            <li><a href="{{ url_for('main.html_div') }}">HTML Div</a></li>
+            <li><a href="{{ url_for('main.html_classes') }}">HTML Classes</a></li>
+            <li><a href="{{ url_for('main.html_id') }}">HTML Id</a></li>
+            <li><a href="{{ url_for('main.html_iframes') }}">HTML Iframes</a></li>
+            <li><a href="{{ url_for('main.html_javascript') }}">HTML JavaScript</a></li>
+            <li><a href="{{ url_for('main.html_file_paths') }}">HTML File Paths</a></li>
+            <li><a href="{{ url_for('main.html_head') }}">HTML Head</a></li>
+            <li><a href="{{ url_for('main.html_layout') }}">HTML Layout</a></li>
+            <li><a href="{{ url_for('main.html_responsive') }}">HTML Responsive</a></li>
+            <li><a href="{{ url_for('main.html_computercode') }}">HTML Computer Code</a></li>
+            <li><a href="{{ url_for('main.html_semantics') }}">HTML Semantics</a></li>
+            <li><a href="{{ url_for('main.html_style_guide') }}" class="active">HTML Style Guide</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>HTML Style Guide and Coding Conventions</h1>
+        
+        <p>A consistent, clean, and tidy HTML code makes it easier to read and understand for yourself and others.</p>
+
+        <h2>Always Declare Document Type</h2>
+        <p>Always declare the document type as the first line in your document.</p>
+        <p>The correct document type for HTML is:</p>
+        <div class="example">
+            <div class="code">
+&lt;!DOCTYPE html&gt;
+            </div>
+        </div>
+
+        <h2>Use Lowercase Element Names</h2>
+        <p>HTML allows mixing uppercase and lowercase letters in element names.</p>
+        <p>We recommend using lowercase element names, because:</p>
+        <ul>
+            <li>Mixing uppercase and lowercase names looks bad</li>
+            <li>Developers normally use lowercase names</li>
+            <li>Lowercase looks cleaner</li>
+            <li>Lowercase is easier to write</li>
+        </ul>
+        
+        <div class="example">
+            <h3>Good:</h3>
+            <div class="code">
+&lt;body&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/body&gt;
+            </div>
+            
+            <h3>Bad:</h3>
+            <div class="code">
+&lt;BODY&gt;
+  &lt;P&gt;This is a paragraph.&lt;/P&gt;
+&lt;/BODY&gt;
+            </div>
+        </div>
+
+        <h2>Close All HTML Elements</h2>
+        <p>In HTML, you do not have to close all elements (for example the &lt;p&gt; element).</p>
+        <p>However, we strongly recommend closing all HTML elements, like this:</p>
+        
+        <div class="example">
+            <h3>Good:</h3>
+            <div class="code">
+&lt;section&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;/section&gt;
+            </div>
+            
+            <h3>Bad:</h3>
+            <div class="code">
+&lt;section&gt;
+  &lt;p&gt;This is a paragraph.
+  &lt;p&gt;This is a paragraph.
+&lt;/section&gt;
+            </div>
+        </div>
+
+        <h2>Use Lowercase Attribute Names</h2>
+        <p>HTML allows mixing uppercase and lowercase letters in attribute names.</p>
+        <p>We recommend using lowercase attribute names, because:</p>
+        <ul>
+            <li>Mixing uppercase and lowercase names looks bad</li>
+            <li>Developers normally use lowercase names</li>
+            <li>Lowercase looks cleaner</li>
+            <li>Lowercase is easier to write</li>
+        </ul>
+        
+        <div class="example">
+            <h3>Good:</h3>
+            <div class="code">
+&lt;a href="https://www.w3schools.com/html/"&gt;Visit our HTML tutorial&lt;/a&gt;
+            </div>
+            
+            <h3>Bad:</h3>
+            <div class="code">
+&lt;a HREF="https://www.w3schools.com/html/"&gt;Visit our HTML tutorial&lt;/a&gt;
+            </div>
+        </div>
+
+        <h2>Always Quote Attribute Values</h2>
+        <p>HTML allows attribute values without quotes.</p>
+        <p>However, we recommend quoting attribute values, because:</p>
+        <ul>
+            <li>Developers normally quote attribute values</li>
+            <li>Quoted values are easier to read</li>
+            <li>You MUST use quotes if the value contains spaces</li>
+        </ul>
+        
+        <div class="example">
+            <h3>Good:</h3>
+            <div class="code">
+&lt;table class="striped"&gt;
+            </div>
+            
+            <h3>Bad:</h3>
+            <div class="code">
+&lt;table class=striped&gt;
+            </div>
+            
+            <h3>Very bad:</h3>
+            <div class="code">
+&lt;table class=table striped&gt;
+            </div>
+        </div>
+
+        <h2>Always Specify alt, width, and height for Images</h2>
+        <p>Always specify the alt attribute for images. This attribute is important if the image for some reason cannot be displayed.</p>
+        <p>Also, always define the width and height of images. This reduces flickering, because the browser can reserve space for the image before loading.</p>
+        
+        <div class="example">
+            <h3>Good:</h3>
+            <div class="code">
+&lt;img src="html5.gif" alt="HTML5" style="width:128px;height:128px"&gt;
+            </div>
+            
+            <h3>Bad:</h3>
+            <div class="code">
+&lt;img src="html5.gif"&gt;
+            </div>
+        </div>
+
+        <h2>Spaces and Equal Signs</h2>
+        <p>HTML allows spaces around equal signs. But space-less is easier to read and groups entities better together.</p>
+        
+        <div class="example">
+            <h3>Good:</h3>
+            <div class="code">
+&lt;link rel="stylesheet" href="styles.css"&gt;
+            </div>
+            
+            <h3>Bad:</h3>
+            <div class="code">
+&lt;link rel = "stylesheet" href = "styles.css"&gt;
+            </div>
+        </div>
+
+        <h2>Avoid Long Code Lines</h2>
+        <p>When using an HTML editor, it is NOT convenient to scroll right and left to read the HTML code.</p>
+        <p>Try to avoid too long code lines.</p>
+
+        <h2>Blank Lines and Indentation</h2>
+        <p>Do not add blank lines, spaces, or indentations without a reason.</p>
+        <p>For readability, add blank lines to separate large or logical code blocks.</p>
+        <p>For readability, add two spaces of indentation. Do not use the tab key.</p>
+        
+        <div class="example">
+            <h3>Good:</h3>
+            <div class="code">
+&lt;body&gt;
+
+  &lt;h1&gt;Famous Cities&lt;/h1&gt;
+
+  &lt;h2&gt;Tokyo&lt;/h2&gt;
+  &lt;p&gt;Tokyo is the capital of Japan, the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.&lt;/p&gt;
+
+  &lt;h2&gt;London&lt;/h2&gt;
+  &lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom.&lt;/p&gt;
+
+  &lt;h2&gt;Paris&lt;/h2&gt;
+  &lt;p&gt;Paris is the capital of France. The Paris area is one of the largest population centers in Europe.&lt;/p&gt;
+
+&lt;/body&gt;
+            </div>
+            
+            <h3>Bad:</h3>
+            <div class="code">
+&lt;body&gt;
+&lt;h1&gt;Famous Cities&lt;/h1&gt;
+&lt;h2&gt;Tokyo&lt;/h2&gt;&lt;p&gt;Tokyo is the capital of Japan, the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.&lt;/p&gt;
+&lt;h2&gt;London&lt;/h2&gt;&lt;p&gt;London is the capital city of England. It is the most populous city in the United Kingdom.&lt;/p&gt;
+&lt;h2&gt;Paris&lt;/h2&gt;&lt;p&gt;Paris is the capital of France. The Paris area is one of the largest population centers in Europe.&lt;/p&gt;
+&lt;/body&gt;
+            </div>
+        </div>
+
+        <h2>Good Table Example:</h2>
+        <div class="example">
+            <div class="code">
+&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Description&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;A&lt;/td&gt;
+    &lt;td&gt;Description of A&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;B&lt;/td&gt;
+    &lt;td&gt;Description of B&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+            </div>
+        </div>
+
+        <h2>Good List Example:</h2>
+        <div class="example">
+            <div class="code">
+&lt;ul&gt;
+  &lt;li&gt;London&lt;/li&gt;
+  &lt;li&gt;Paris&lt;/li&gt;
+  &lt;li&gt;Tokyo&lt;/li&gt;
+&lt;/ul&gt;
+            </div>
+        </div>
+
+        <div class="activity">
+            <h3>Try it Yourself</h3>
+            <p>Practice writing clean, well-formatted HTML:</p>
+            <div class="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Style Guide Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;header&gt;
+    &lt;h1&gt;My Website&lt;/h1&gt;
+    &lt;nav&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/nav&gt;
+  &lt;/header&gt;
+
+  &lt;main&gt;
+    &lt;section&gt;
+      &lt;h2&gt;Welcome&lt;/h2&gt;
+      &lt;p&gt;This is a well-formatted HTML document.&lt;/p&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+
+  &lt;footer&gt;
+    &lt;p&gt;© 2024 My Website&lt;/p&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="{{ url_for('main.html_semantics') }}" class="prev">❮ Previous</a>
+            <a href="{{ url_for('main.css_intro') }}" class="next">Next ❯</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

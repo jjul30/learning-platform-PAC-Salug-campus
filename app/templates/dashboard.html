@@ -1,0 +1,32 @@
+
+{% extends "base.html" %}
+
+{% block title %}Dashboard - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="lesson-content">
+    <h1>Welcome to Your Dashboard, {{ session.username }}!</h1>
+    <p>Track your progress and continue learning</p>
+    
+    <div class="course-grid">
+        <div class="course-card">
+            <h3>HTML Progress</h3>
+            <p>Continue your HTML journey</p>
+            <a href="{{ url_for('main.html_intro') }}" class="btn">Continue</a>
+            <a href="{{ url_for('main.html_quiz') }}" class="btn btn-secondary">Take Quiz</a>
+        </div>
+        <div class="course-card">
+            <h3>CSS Progress</h3>
+            <p>Style your knowledge</p>
+            <a href="{{ url_for('main.css_intro') }}" class="btn">Continue</a>
+            <a href="{{ url_for('main.css_quiz') }}" class="btn btn-secondary">Take Quiz</a>
+        </div>
+        <div class="course-card">
+            <h3>Python Progress</h3>
+            <p>Code your way to success</p>
+            <a href="{{ url_for('main.python_intro') }}" class="btn">Continue</a>
+            <a href="{{ url_for('main.python_quiz') }}" class="btn btn-secondary">Take Quiz</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

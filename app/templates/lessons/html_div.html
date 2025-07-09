@@ -1,0 +1,176 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Div Element - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">HTML HOME</h3>
+            <ul class="sidebar-nav">
+                <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+                <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+                <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+                <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+                <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+                <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+                <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+                <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+                <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+                <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+                <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+                <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+                <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+                <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+                <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+                <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+                <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+                <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+                <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+                <li><a href="{{ url_for('main.html_block_inline') }}">HTML Block & Inline</a></li>
+                <li><a href="{{ url_for('main.html_div') }}" class="active">HTML Div</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>HTML Div Element</h1>
+        
+        <p>The <code>&lt;div&gt;</code> element is used as a container for other HTML elements.</p>
+        
+        <h2>The &lt;div&gt; Element</h2>
+        <p>The <code>&lt;div&gt;</code> element is by default a block element, meaning that it takes all available width, and comes with line breaks before and after.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>Lorem Ipsum &lt;div&gt;I am a div&lt;/div&gt; dolor sit amet.</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <p>The <code>&lt;div&gt;</code> element has no required attributes, but <code>style</code>, <code>class</code> and <code>id</code> are common.</p>
+        
+        <h2>&lt;div&gt; as a container</h2>
+        <p>The <code>&lt;div&gt;</code> element is often used to group sections of a web page together.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;div&gt;
+  &lt;h2&gt;London&lt;/h2&gt;
+  &lt;p&gt;London is the capital city of England.&lt;/p&gt;
+  &lt;p&gt;London has over 13 million inhabitants.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Center align a &lt;div&gt; element</h2>
+        <p>If you have a <code>&lt;div&gt;</code> element that is not 100% wide, and you want to center-align it, set the CSS <code>margin</code> property to <code>auto</code>.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;style&gt;
+div {
+  width:300px;
+  margin:auto;
+}
+&lt;/style&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Multiple &lt;div&gt; elements</h2>
+        <p>You can have many <code>&lt;div&gt;</code> containers on the same page.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;div&gt;
+  &lt;h2&gt;London&lt;/h2&gt;
+  &lt;p&gt;London is the capital city of England.&lt;/p&gt;
+  &lt;p&gt;London has over 13 million inhabitants.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;h2&gt;Oslo&lt;/h2&gt;
+  &lt;p&gt;Oslo is the capital city of Norway.&lt;/p&gt;
+  &lt;p&gt;Oslo has over 600.000 inhabitants.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;h2&gt;Rome&lt;/h2&gt;
+  &lt;p&gt;Rome is the capital city of Italy.&lt;/p&gt;
+  &lt;p&gt;Rome has almost 3 million inhabitants.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Aligning &lt;div&gt; elements side by side</h2>
+        <p>There are different methods for aligning elements side by side, all include some CSS styling. We will look at the most common methods:</p>
+        
+        <h3>Float</h3>
+        <p>The CSS <code>float</code> property was not originally meant to align <code>&lt;div&gt;</code> elements side-by-side, but has been used for this purpose for many years.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;style&gt;
+.mycontainer {
+  width:100%;
+  overflow:auto;
+}
+.mycontainer div {
+  width:33%;
+  float:left;
+}
+&lt;/style&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h3>Inline-block</h3>
+        <p>If you change the <code>&lt;div&gt;</code> element's default display behavior from <code>block</code> to <code>inline-block</code>, you can use them side by side:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;style&gt;
+div {
+  width: 30%;
+  display: inline-block;
+}
+&lt;/style&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h3>Flex</h3>
+        <p>The CSS Flexbox Layout Module was introduced to make it easier to design flexible responsive layout structure without using float or positioning.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;style&gt;
+.mycontainer {
+  display: flex;
+}
+.mycontainer > div {
+  flex: 1;
+}
+&lt;/style&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <div style="margin-top: 2rem;">
+            <a href="{{ url_for('main.html_block_inline') }}" class="btn btn-secondary">« Previous: HTML Block & Inline</a>
+            <a href="{{ url_for('main.html_classes') }}" class="btn btn-secondary">Next: HTML Classes »</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

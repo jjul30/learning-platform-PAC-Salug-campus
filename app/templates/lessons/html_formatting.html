@@ -1,0 +1,257 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Formatting - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">HTML HOME</h3>
+            <ul class="sidebar-nav">
+                <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+                <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+                <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+                <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+                <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+                <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+                <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+                <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+                <li><a href="{{ url_for('main.html_formatting') }}" class="active">HTML Formatting</a></li>
+                <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+                <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+                <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+                <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+                <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+                <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+                <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+                <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+                <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+                <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+                <li><a href="{{ url_for('main.html_block_inline') }}">HTML Block & Inline</a></li>
+                <li><a href="{{ url_for('main.html_div') }}">HTML Div</a></li>
+                <li><a href="{{ url_for('main.html_classes') }}">HTML Classes</a></li>
+                <li><a href="{{ url_for('main.html_id') }}">HTML Id</a></li>
+                <li><a href="{{ url_for('main.html_iframes') }}">HTML Iframes</a></li>
+                <li><a href="{{ url_for('main.html_javascript') }}">HTML JavaScript</a></li>
+                <li><a href="{{ url_for('main.html_file_paths') }}">HTML File Paths</a></li>
+                <li><a href="{{ url_for('main.html_head') }}">HTML Head</a></li>
+                <li><a href="{{ url_for('main.html_layout') }}">HTML Layout</a></li>
+                <li><a href="{{ url_for('main.html_responsive') }}">HTML Responsive</a></li>
+                <li><a href="{{ url_for('main.html_computercode') }}">HTML Computercode</a></li>
+                <li><a href="{{ url_for('main.html_semantics') }}">HTML Semantics</a></li>
+                <li><a href="{{ url_for('main.html_style_guide') }}">HTML Style Guide</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <h1>HTML Text Formatting</h1>
+        
+        <div class="tryit-section">
+            <p><strong>HTML contains several elements for defining text with a special meaning.</strong></p>
+        </div>
+        
+        <h2>HTML Formatting Elements</h2>
+        <p>Formatting elements were designed to display special types of text:</p>
+        
+        <ul>
+            <li><code>&lt;b&gt;</code> - Bold text</li>
+            <li><code>&lt;strong&gt;</code> - Important text</li>
+            <li><code>&lt;i&gt;</code> - Italic text</li>
+            <li><code>&lt;em&gt;</code> - Emphasized text</li>
+            <li><code>&lt;mark&gt;</code> - Marked text</li>
+            <li><code>&lt;small&gt;</code> - Smaller text</li>
+            <li><code>&lt;del&gt;</code> - Deleted text</li>
+            <li><code>&lt;ins&gt;</code> - Inserted text</li>
+            <li><code>&lt;sub&gt;</code> - Subscript text</li>
+            <li><code>&lt;sup&gt;</code> - Superscript text</li>
+        </ul>
+        
+        <h2>HTML &lt;b&gt; and &lt;strong&gt; Elements</h2>
+        <p>The HTML <code>&lt;b&gt;</code> element defines bold text, without any extra importance.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;b&gt;This text is bold&lt;/b&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <p>The HTML <code>&lt;strong&gt;</code> element defines text with strong importance. The content inside is typically displayed in bold.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;strong&gt;This text is important!&lt;/strong&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML &lt;i&gt; and &lt;em&gt; Elements</h2>
+        <p>The HTML <code>&lt;i&gt;</code> element defines a part of text in an alternate voice or mood. The content inside is typically displayed in italic.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;i&gt;This text is italic&lt;/i&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <p>The HTML <code>&lt;em&gt;</code> element defines emphasized text. The content inside is typically displayed in italic.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;em&gt;This text is emphasized&lt;/em&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML &lt;small&gt; Element</h2>
+        <p>The HTML <code>&lt;small&gt;</code> element defines smaller text:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;small&gt;This is some smaller text.&lt;/small&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML &lt;mark&gt; Element</h2>
+        <p>The HTML <code>&lt;mark&gt;</code> element defines text that should be marked or highlighted:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;p&gt;Do not forget to buy &lt;mark&gt;milk&lt;/mark&gt; today.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML &lt;del&gt; Element</h2>
+        <p>The HTML <code>&lt;del&gt;</code> element defines text that has been deleted from a document. Browsers will usually strike a line through the deleted text:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;p&gt;My favorite color is &lt;del&gt;blue&lt;/del&gt; red.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML &lt;ins&gt; Element</h2>
+        <p>The HTML <code>&lt;ins&gt;</code> element defines a text that has been inserted into a document. Browsers will usually underline inserted text:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;p&gt;My favorite color is &lt;del&gt;blue&lt;/del&gt; &lt;ins&gt;red&lt;/ins&gt;.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML &lt;sub&gt; Element</h2>
+        <p>The HTML <code>&lt;sub&gt;</code> element defines subscript text. Subscript text appears half a character below the normal line, and is sometimes rendered in a smaller font. Subscript text can be used for chemical formulas, like H<sub>2</sub>O:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;p&gt;This is &lt;sub&gt;subscript&lt;/sub&gt; text.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML &lt;sup&gt; Element</h2>
+        <p>The HTML <code>&lt;sup&gt;</code> element defines superscript text. Superscript text appears half a character above the normal line, and is sometimes rendered in a smaller font. Superscript text can be used for footnotes, like WWW<sup>[1]</sup>:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;p&gt;This is &lt;sup&gt;superscript&lt;/sup&gt; text.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Activity: Format Your Text</h2>
+        <div class="activity-section">
+            <h3>Practice Exercise:</h3>
+            <p>Create a formatted article using different formatting elements:</p>
+            
+            <div class="code-example">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My Article&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Important:&lt;/strong&gt; This is a &lt;em&gt;very important&lt;/em&gt; article.&lt;/p&gt;
+
+&lt;p&gt;The chemical formula for water is H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;
+
+&lt;p&gt;Einstein's famous equation is E=mc&lt;sup&gt;2&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Please &lt;mark&gt;remember&lt;/mark&gt; to submit your assignment.&lt;/p&gt;
+
+&lt;p&gt;The price was &lt;del&gt;$20&lt;/del&gt; &lt;ins&gt;$15&lt;/ins&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;small&gt;* Terms and conditions apply&lt;/small&gt;&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            
+            <h4>Create your own formatted text with:</h4>
+            <ul>
+                <li>Bold and italic text</li>
+                <li>Highlighted (marked) text</li>
+                <li>Mathematical formulas with subscript/superscript</li>
+                <li>Deleted and inserted text</li>
+                <li>Small print text</li>
+            </ul>
+        </div>
+        
+        <h2>Formatting Elements Summary:</h2>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+            <tr style="background-color: #f2f2f2;">
+                <th style="border: 1px solid #ddd; padding: 8px;">Element</th>
+                <th style="border: 1px solid #ddd; padding: 8px;">Purpose</th>
+                <th style="border: 1px solid #ddd; padding: 8px;">Visual Effect</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">&lt;b&gt;</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Bold text (visual only)</td>
+                <td style="border: 1px solid #ddd; padding: 8px;"><b>Bold text</b></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">&lt;strong&gt;</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Important text (semantic)</td>
+                <td style="border: 1px solid #ddd; padding: 8px;"><strong>Important text</strong></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">&lt;i&gt;</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Italic text (visual only)</td>
+                <td style="border: 1px solid #ddd; padding: 8px;"><i>Italic text</i></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">&lt;em&gt;</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Emphasized text (semantic)</td>
+                <td style="border: 1px solid #ddd; padding: 8px;"><em>Emphasized text</em></td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">&lt;mark&gt;</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Highlighted text</td>
+                <td style="border: 1px solid #ddd; padding: 8px;"><mark>Highlighted text</mark></td>
+            </tr>
+        </table>
+        
+        <div style="margin-top: 2rem;">
+            <a href="{{ url_for('main.html_styles') }}" class="btn btn-secondary">« Previous: HTML Styles</a>
+            <a href="{{ url_for('main.html_quotations') }}" class="btn btn-secondary">Next: HTML Quotations »</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

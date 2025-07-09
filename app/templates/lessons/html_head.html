@@ -1,0 +1,135 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Head Element - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+            <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+            <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+            <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+            <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+            <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+            <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+            <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+            <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+            <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+            <li><a href="{{ url_for('main.html_block_inline') }}">HTML Block & Inline</a></li>
+            <li><a href="{{ url_for('main.html_div') }}">HTML Div</a></li>
+            <li><a href="{{ url_for('main.html_classes') }}">HTML Classes</a></li>
+            <li><a href="{{ url_for('main.html_id') }}">HTML Id</a></li>
+            <li><a href="{{ url_for('main.html_iframes') }}">HTML Iframes</a></li>
+            <li><a href="{{ url_for('main.html_javascript') }}">HTML JavaScript</a></li>
+            <li><a href="{{ url_for('main.html_file_paths') }}">HTML File Paths</a></li>
+            <li><a href="{{ url_for('main.html_head') }}" class="active">HTML Head</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>The HTML &lt;head&gt; Element</h1>
+        
+        <p>The HTML &lt;head&gt; element is a container for the following elements: &lt;title&gt;, &lt;style&gt;, &lt;meta&gt;, &lt;link&gt;, &lt;script&gt;, and &lt;base&gt;.</p>
+
+        <h2>The HTML &lt;head&gt; Element</h2>
+        <p>The &lt;head&gt; element is a container for metadata (data about data) and is placed between the &lt;html&gt; tag and the &lt;body&gt; tag.</p>
+        <p>HTML metadata is data about the HTML document. Metadata is not displayed.</p>
+        <p>Metadata typically define the document title, character set, styles, scripts, and other meta information.</p>
+
+        <h2>The HTML &lt;title&gt; Element</h2>
+        <p>The &lt;title&gt; element defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;A Meaningful Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+The content of the document......
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </div>
+        </div>
+
+        <h2>The HTML &lt;style&gt; Element</h2>
+        <p>The &lt;style&gt; element is used to define style information for a single HTML page:</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;style&gt;
+  body {background-color: powderblue;}
+  h1 {color: red;}
+  p {color: blue;}
+&lt;/style&gt;
+            </div>
+        </div>
+
+        <h2>The HTML &lt;link&gt; Element</h2>
+        <p>The &lt;link&gt; element defines the relationship between the current document and an external resource.</p>
+        <p>The &lt;link&gt; tag is most often used to link to external style sheets:</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;link rel="stylesheet" href="mystyle.css"&gt;
+            </div>
+        </div>
+
+        <h2>The HTML &lt;meta&gt; Element</h2>
+        <p>The &lt;meta&gt; element is typically used to specify the character set, page description, keywords, author of the document, and viewport settings.</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;meta charset="UTF-8"&gt;
+&lt;meta name="description" content="Free Web tutorials"&gt;
+&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;
+&lt;meta name="author" content="John Doe"&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            </div>
+        </div>
+
+        <div class="activity">
+            <h3>Try it Yourself</h3>
+            <p>Create a complete HTML document with proper head elements:</p>
+            <div class="code">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;My Web Page&lt;/title&gt;
+    &lt;style&gt;
+        body { font-family: Arial, sans-serif; }
+        h1 { color: blue; }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Page&lt;/h1&gt;
+    &lt;p&gt;This page has proper metadata.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="{{ url_for('main.html_file_paths') }}" class="prev">❮ Previous</a>
+            <a href="{{ url_for('main.html_layout') }}" class="next">Next ❯</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

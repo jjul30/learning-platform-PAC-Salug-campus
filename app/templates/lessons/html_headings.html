@@ -1,0 +1,111 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Headings - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">HTML HOME</h3>
+            <ul class="sidebar-nav">
+                <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+                <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+                <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+                <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+                <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+                <li><a href="{{ url_for('main.html_headings') }}" class="active">HTML Headings</a></li>
+                <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+                <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+                <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+                <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+                <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+                <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+                <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+                <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+                <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+                <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+                <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+                <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+                <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+                <li><a href="{{ url_for('main.html_block_inline') }}">HTML Block & Inline</a></li>
+                <li><a href="{{ url_for('main.html_div') }}">HTML Div</a></li>
+                <li><a href="{{ url_for('main.html_classes') }}">HTML Classes</a></li>
+                <li><a href="{{ url_for('main.html_id') }}">HTML Id</a></li>
+                <li><a href="{{ url_for('main.html_iframes') }}">HTML Iframes</a></li>
+                <li><a href="{{ url_for('main.html_javascript') }}">HTML JavaScript</a></li>
+                <li><a href="{{ url_for('main.html_file_paths') }}">HTML File Paths</a></li>
+                <li><a href="{{ url_for('main.html_head') }}">HTML Head</a></li>
+                <li><a href="{{ url_for('main.html_layout') }}">HTML Layout</a></li>
+                <li><a href="{{ url_for('main.html_responsive') }}">HTML Responsive</a></li>
+                <li><a href="{{ url_for('main.html_computercode') }}">HTML Computercode</a></li>
+                <li><a href="{{ url_for('main.html_semantics') }}">HTML Semantics</a></li>
+                <li><a href="{{ url_for('main.html_style_guide') }}">HTML Style Guide</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <h1>HTML Headings</h1>
+        
+        <div class="tryit-section">
+            <p><strong>HTML headings are titles or subtitles that you want to display on a webpage.</strong></p>
+        </div>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div style="background-color: #f1f1f1; padding: 20px; margin: 20px 0;">
+                <h1 style="margin: 10px 0;">Heading 1</h1>
+                <h2 style="margin: 10px 0;">Heading 2</h2>
+                <h3 style="margin: 10px 0;">Heading 3</h3>
+                <h4 style="margin: 10px 0;">Heading 4</h4>
+                <h5 style="margin: 10px 0;">Heading 5</h5>
+                <h6 style="margin: 10px 0;">Heading 6</h6>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML Headings</h2>
+        <p>HTML headings are defined with the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> tags.</p>
+        <p><code>&lt;h1&gt;</code> defines the most important heading. <code>&lt;h6&gt;</code> defines the least important heading.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <p><strong>Note:</strong> Browsers automatically add some white space (a margin) before and after a heading.</p>
+        
+        <h2>Headings Are Important</h2>
+        <p>Search engines use the headings to index the structure and content of your web pages.</p>
+        <p>Users often skim a page by its headings. It is important to use headings to show the document structure.</p>
+        <p><code>&lt;h1&gt;</code> headings should be used for main headings, followed by <code>&lt;h2&gt;</code> headings, then the less important <code>&lt;h3&gt;</code>, and so on.</p>
+        
+        <p><strong>Note:</strong> Use HTML headings for headings only. Don't use headings to make text BIG or bold.</p>
+        
+        <h2>Bigger Headings</h2>
+        <p>Each HTML heading has a default size. However, you can specify the size for any heading with the <code>style</code> attribute, using the CSS <code>font-size</code> property:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;h1 style="font-size:60px;"&gt;Heading 1&lt;/h1&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <div style="margin-top: 2rem;">
+            <a href="{{ url_for('main.html_attributes') }}" class="btn btn-secondary">« Previous: HTML Attributes</a>
+            <a href="{{ url_for('main.html_paragraphs') }}" class="btn btn-secondary">Next: HTML Paragraphs »</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

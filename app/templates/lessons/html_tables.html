@@ -1,0 +1,204 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Tables - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="lesson-layout">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+            <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+            <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+            <li><a href="{{ url_for('main.html_tables') }}" class="active">HTML Tables</a></li>
+        </ul>
+    </div>
+    
+    <div class="lesson-content">
+        <h1>HTML Tables</h1>
+        
+        <div class="tryit-section">
+            <p><strong>HTML tables allow web developers to arrange data into rows and columns.</strong></p>
+        </div>
+        
+        <h2>Define an HTML Table</h2>
+        <p>A table in HTML consists of table cells inside rows and columns.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <p>A simple HTML table:</p>
+            <div class="code-example">
+                <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Company&lt;/th&gt;
+    &lt;th&gt;Contact&lt;/th&gt;
+    &lt;th&gt;Country&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Alfreds Futterkiste&lt;/td&gt;
+    &lt;td&gt;Maria Anders&lt;/td&gt;
+    &lt;td&gt;Germany&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Centro comercial Moctezuma&lt;/td&gt;
+    &lt;td&gt;Francisco Chang&lt;/td&gt;
+    &lt;td&gt;Mexico&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Table Cells</h2>
+        <p>Each table cell is defined by a <code>&lt;td&gt;</code> and a <code>&lt;/td&gt;</code> tag.</p>
+        <p><code>td</code> stands for table data.</p>
+        <p>Everything between <code>&lt;td&gt;</code> and <code>&lt;/td&gt;</code> are the content of the table cell.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Emil&lt;/td&gt;
+    &lt;td&gt;Tobias&lt;/td&gt;
+    &lt;td&gt;Linus&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <p><strong>Note:</strong> A table cell can contain all sorts of HTML elements: text, images, lists, links, other tables, etc.</p>
+        
+        <h2>Table Rows</h2>
+        <p>Each table row starts with a <code>&lt;tr&gt;</code> and ends with a <code>&lt;/tr&gt;</code> tag.</p>
+        <p><code>tr</code> stands for table row.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Emil&lt;/td&gt;
+    &lt;td&gt;Tobias&lt;/td&gt;
+    &lt;td&gt;Linus&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;16&lt;/td&gt;
+    &lt;td&gt;14&lt;/td&gt;
+    &lt;td&gt;10&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <p>You can have as many rows as you like in a table; just make sure that the number of cells are the same in each row.</p>
+        
+        <h2>Table Headers</h2>
+        <p>Sometimes you want your cells to be table header cells. In those cases use the <code>&lt;th&gt;</code> tag instead of the <code>&lt;td&gt;</code> tag:</p>
+        <p><code>th</code> stands for table header.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <p>Let the first row be table header cells:</p>
+            <div class="code-example">
+                <pre><code>&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Person 1&lt;/th&gt;
+    &lt;th&gt;Person 2&lt;/th&gt;
+    &lt;th&gt;Person 3&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Emil&lt;/td&gt;
+    &lt;td&gt;Tobias&lt;/td&gt;
+    &lt;td&gt;Linus&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;16&lt;/td&gt;
+    &lt;td&gt;14&lt;/td&gt;
+    &lt;td&gt;10&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <p>By default, the text in <code>&lt;th&gt;</code> elements are bold and centered, but you can change that with CSS.</p>
+        
+        <h2>HTML Table Tags</h2>
+        <table class="reference-table">
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>&lt;table&gt;</code></td>
+                <td>Defines a table</td>
+            </tr>
+            <tr>
+                <td><code>&lt;th&gt;</code></td>
+                <td>Defines a header cell in a table</td>
+            </tr>
+            <tr>
+                <td><code>&lt;tr&gt;</code></td>
+                <td>Defines a row in a table</td>
+            </tr>
+            <tr>
+                <td><code>&lt;td&gt;</code></td>
+                <td>Defines a cell in a table</td>
+            </tr>
+            <tr>
+                <td><code>&lt;caption&gt;</code></td>
+                <td>Defines a table caption</td>
+            </tr>
+            <tr>
+                <td><code>&lt;colgroup&gt;</code></td>
+                <td>Specifies a group of one or more columns in a table for formatting</td>
+            </tr>
+            <tr>
+                <td><code>&lt;col&gt;</code></td>
+                <td>Specifies column properties for each column within a colgroup element</td>
+            </tr>
+            <tr>
+                <td><code>&lt;thead&gt;</code></td>
+                <td>Groups the header content in a table</td>
+            </tr>
+            <tr>
+                <td><code>&lt;tbody&gt;</code></td>
+                <td>Groups the body content in a table</td>
+            </tr>
+            <tr>
+                <td><code>&lt;tfoot&gt;</code></td>
+                <td>Groups the footer content in a table</td>
+            </tr>
+        </table>
+        
+        <div class="activity-section">
+            <h2>Try It Yourself - Activity</h2>
+            <p><strong>Activity:</strong> Create a table that displays information about your favorite movies:</p>
+            <ul>
+                <li>Include headers for Movie Title, Director, Year, and Rating</li>
+                <li>Add at least 3 rows of movie data</li>
+                <li>Use proper table structure with &lt;th&gt; and &lt;td&gt; elements</li>
+                <li>Add a caption to describe what the table contains</li>
+            </ul>
+            <p><strong>Meaning:</strong> HTML tables are essential for displaying structured data in rows and columns. They provide a semantic way to present tabular information like spreadsheets, making data easy to read and compare. Proper use of table headers also improves accessibility for screen readers.</p>
+        </div>
+    </div>
+    
+    <div class="navigation">
+        <a href="{{ url_for('main.html_colors') }}" class="prev">❮ Previous</a>
+        <a href="{{ url_for('main.html_lists') }}" class="next">Next ❯</a>
+    </div>
+</div>
+{% endblock %}

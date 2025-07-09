@@ -1,0 +1,165 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Quotations - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="lesson-layout">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}" class="active">HTML Quotations</a></li>
+        </ul>
+    </div>
+    
+    <div class="lesson-content">
+        <h1>HTML Quotations and Citation Elements</h1>
+        
+        <div class="tryit-section">
+            <p><strong>In this chapter we will go through the <code>&lt;blockquote&gt;</code>, <code>&lt;q&gt;</code>, <code>&lt;abbr&gt;</code>, <code>&lt;address&gt;</code>, <code>&lt;cite&gt;</code>, and <code>&lt;bdo&gt;</code> HTML elements.</strong></p>
+        </div>
+        
+        <h2>HTML &lt;blockquote&gt; for Quotations</h2>
+        <p>The HTML <code>&lt;blockquote&gt;</code> element defines a section that is quoted from another source.</p>
+        <p>Browsers usually indent <code>&lt;blockquote&gt;</code> elements.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;p&gt;Here is a quote from WWF's website:&lt;/p&gt;
+&lt;blockquote cite="http://www.worldwildlife.org/who/index.html"&gt;
+For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries and is supported by over one million members in the United States and close to five million globally.
+&lt;/blockquote&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML &lt;q&gt; for Short Quotations</h2>
+        <p>The HTML <code>&lt;q&gt;</code> tag defines a short quotation.</p>
+        <p>Browsers normally insert quotation marks around the quotation.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;p&gt;WWF's goal is to: &lt;q&gt;Build a future where people live in harmony with nature.&lt;/q&gt;&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML &lt;abbr&gt; for Abbreviations</h2>
+        <p>The HTML <code>&lt;abbr&gt;</code> tag defines an abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".</p>
+        <p>Marking abbreviations can give useful information to browsers, translation systems and search-engines.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;p&gt;The &lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt; was founded in 1948.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML &lt;address&gt; for Contact Information</h2>
+        <p>The HTML <code>&lt;address&gt;</code> tag defines the contact information for the author/owner of a document or an article.</p>
+        <p>The contact information can be an email address, URL, physical address, phone number, social media handle, etc.</p>
+        <p>The text in the <code>&lt;address&gt;</code> element usually renders in italic, and browsers will always add a line break before and after the <code>&lt;address&gt;</code> element.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;address&gt;
+Written by John Doe.&lt;br&gt;
+Visit us at:&lt;br&gt;
+Example.com&lt;br&gt;
+Box 564, Disneyland&lt;br&gt;
+USA
+&lt;/address&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML &lt;cite&gt; for Work Title</h2>
+        <p>The HTML <code>&lt;cite&gt;</code> tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).</p>
+        <p><strong>Note:</strong> A person's name is not the title of a work.</p>
+        <p>The text in the <code>&lt;cite&gt;</code> element usually renders in italic.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;p&gt;&lt;cite&gt;The Scream&lt;/cite&gt; by Edvard Munch. Painted in 1893.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML &lt;bdo&gt; for Bi-Directional Override</h2>
+        <p>BDO stands for Bi-Directional Override.</p>
+        <p>The HTML <code>&lt;bdo&gt;</code> tag is used to override the current text direction.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;bdo dir="rtl"&gt;This text will be written from right to left&lt;/bdo&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML Quotation and Citation Elements</h2>
+        <table class="reference-table">
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>&lt;abbr&gt;</code></td>
+                <td>Defines an abbreviation or acronym</td>
+            </tr>
+            <tr>
+                <td><code>&lt;address&gt;</code></td>
+                <td>Defines contact information for the author/owner of a document</td>
+            </tr>
+            <tr>
+                <td><code>&lt;bdo&gt;</code></td>
+                <td>Defines the text direction</td>
+            </tr>
+            <tr>
+                <td><code>&lt;blockquote&gt;</code></td>
+                <td>Defines a section that is quoted from another source</td>
+            </tr>
+            <tr>
+                <td><code>&lt;cite&gt;</code></td>
+                <td>Defines the title of a work</td>
+            </tr>
+            <tr>
+                <td><code>&lt;q&gt;</code></td>
+                <td>Defines a short inline quotation</td>
+            </tr>
+        </table>
+        
+        <div class="activity-section">
+            <h2>Try It Yourself - Activity</h2>
+            <p><strong>Activity:</strong> Create a webpage that includes:</p>
+            <ul>
+                <li>A blockquote with a long quotation from your favorite book</li>
+                <li>A short quote using the &lt;q&gt; tag</li>
+                <li>An abbreviation with a title attribute</li>
+                <li>Contact information using the &lt;address&gt; tag</li>
+                <li>A citation of a creative work</li>
+            </ul>
+            <p><strong>Meaning:</strong> Quotation and citation elements help structure content and provide semantic meaning to different types of quoted or referenced material, making your HTML more accessible and meaningful.</p>
+        </div>
+    </div>
+    
+    <div class="navigation">
+        <a href="{{ url_for('main.html_formatting') }}" class="prev">❮ Previous</a>
+        <a href="{{ url_for('main.html_comments') }}" class="next">Next ❯</a>
+    </div>
+</div>
+{% endblock %}

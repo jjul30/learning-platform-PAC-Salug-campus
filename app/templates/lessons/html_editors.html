@@ -1,0 +1,116 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Editors - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="lesson-layout">
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">HTML HOME</h3>
+            <ul class="sidebar-nav">
+                <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+                <li><a href="{{ url_for('main.html_editors') }}" class="active">HTML Editors</a></li>
+                <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+                <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+                <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+                <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+                <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+                <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+                <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+                <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+                <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+                <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+                <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+                <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+                <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+                <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+                <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+                <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+                <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+                <li><a href="{{ url_for('main.html_block_inline') }}">HTML Block & Inline</a></li>
+                <li><a href="{{ url_for('main.html_div') }}">HTML Div</a></li>
+                <li><a href="{{ url_for('main.html_classes') }}">HTML Classes</a></li>
+                <li><a href="{{ url_for('main.html_id') }}">HTML Id</a></li>
+                <li><a href="{{ url_for('main.html_iframes') }}">HTML Iframes</a></li>
+                <li><a href="{{ url_for('main.html_javascript') }}">HTML JavaScript</a></li>
+                <li><a href="{{ url_for('main.html_file_paths') }}">HTML File Paths</a></li>
+                <li><a href="{{ url_for('main.html_head') }}">HTML Head</a></li>
+                <li><a href="{{ url_for('main.html_layout') }}">HTML Layout</a></li>
+                <li><a href="{{ url_for('main.html_responsive') }}">HTML Responsive</a></li>
+                <li><a href="{{ url_for('main.html_computercode') }}">HTML Computercode</a></li>
+                <li><a href="{{ url_for('main.html_semantics') }}">HTML Semantics</a></li>
+                <li><a href="{{ url_for('main.html_style_guide') }}">HTML Style Guide</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="lesson-content">
+        <h1>HTML Editors</h1>
+        
+        <div class="tryit-section">
+            <p><strong>A simple text editor is all you need to learn HTML.</strong></p>
+        </div>
+        
+        <h2>Learn HTML Using Notepad or TextEdit</h2>
+        <p>Web pages can be created and modified by using professional HTML editors.</p>
+        <p>However, for learning HTML we recommend a simple text editor like Notepad (PC) or TextEdit (Mac).</p>
+        <p>We believe that using a simple text editor is a good way to learn HTML.</p>
+        <p>Follow the steps below to create your first web page with Notepad or TextEdit.</p>
+        
+        <h2>Step 1: Open Notepad (PC)</h2>
+        <p><strong>Windows 8 or later:</strong></p>
+        <p>Open the <strong>Start Screen</strong> (the window symbol at the bottom left on your screen). Type <strong>Notepad</strong>.</p>
+        <p><strong>Windows 7 or earlier:</strong></p>
+        <p>Open <strong>Start > Programs > Accessories > Notepad</strong></p>
+        
+        <h2>Step 1: Open TextEdit (Mac)</h2>
+        <p>Open <strong>Finder > Applications > TextEdit</strong></p>
+        <p>Also change some preferences to get the application to save files correctly. In <strong>Preferences > Format > choose "Plain Text"</strong></p>
+        <p>Then under "Open and Save", check the box that says "Display HTML files as HTML code instead of formatted text".</p>
+        <p><strong>Then open a new document to place the code.</strong></p>
+        
+        <h2>Step 2: Write Some HTML</h2>
+        <p>Write or copy the following HTML code into Notepad:</p>
+        
+        <div class="example-section">
+            <div class="code-example">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Heading&lt;/h1&gt;
+
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+        </div>
+        
+        <h2>Step 3: Save the HTML Page</h2>
+        <p>Save the file on your computer. Select <strong>File > Save as</strong> in the Notepad menu.</p>
+        <p>Name the file <strong>"index.htm"</strong> and set the encoding to <strong>UTF-8</strong> (which is the preferred encoding for HTML files).</p>
+        
+        <div class="tryit-section">
+            <p><strong>Tip:</strong> You can use either .htm or .html as file extension. There is no difference; it is up to you.</p>
+        </div>
+        
+        <h2>Step 4: View the HTML Page in Your Browser</h2>
+        <p>Open the saved HTML file in your favorite browser (double click on the file, or right-click - and choose "Open with").</p>
+        <p>The result will look much like this:</p>
+        
+        <div class="example-section">
+            <div style="border: 1px solid #ddd; padding: 1rem; background: white;">
+                <h1 style="margin: 0;">My First Heading</h1>
+                <p style="margin: 0;">My first paragraph.</p>
+            </div>
+        </div>
+        
+        <div style="margin-top: 2rem;">
+            <a href="{{ url_for('main.html_intro') }}" class="btn btn-secondary">« Previous: HTML Introduction</a>
+            <a href="{{ url_for('main.html_basic') }}" class="btn btn-secondary">Next: HTML Basic »</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

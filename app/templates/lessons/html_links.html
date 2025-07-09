@@ -1,0 +1,141 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Links - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="lesson-layout">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+            <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+            <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+            <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+            <li><a href="{{ url_for('main.html_links') }}" class="active">HTML Links</a></li>
+        </ul>
+    </div>
+    
+    <div class="lesson-content">
+        <h1>HTML Links</h1>
+        
+        <div class="tryit-section">
+            <p><strong>Links are found in nearly all web pages. Links allow users to click their way from page to page.</strong></p>
+        </div>
+        
+        <h2>HTML Links - Hyperlinks</h2>
+        <p>HTML links are hyperlinks.</p>
+        <p>You can click on a link and jump to another document.</p>
+        <p>When you move the mouse over a link, the mouse arrow will turn into a little hand.</p>
+        
+        <div class="note-section">
+            <p><strong>Note:</strong> A link does not have to be text. A link can be an image or any other HTML element!</p>
+        </div>
+        
+        <h2>HTML Links - Syntax</h2>
+        <p>The HTML <code>&lt;a&gt;</code> tag defines a hyperlink. It has the following syntax:</p>
+        
+        <div class="code-example">
+            <pre><code>&lt;a href="url"&gt;link text&lt;/a&gt;</code></pre>
+        </div>
+        
+        <p>The most important attribute of the <code>&lt;a&gt;</code> element is the <code>href</code> attribute, which indicates the link's destination.</p>
+        <p>The <em>link text</em> is the part that will be visible to the reader.</p>
+        <p>Clicking on the link text, will send the reader to the specified URL address.</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <p>This example shows how to create a link to W3Schools.com:</p>
+            <pre><code>&lt;a href="https://www.w3schools.com/"&gt;Visit W3Schools.com!&lt;/a&gt;</code></pre>
+        </div>
+        
+        <h2>HTML Links - The target Attribute</h2>
+        <p>By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.</p>
+        <p>The <code>target</code> attribute specifies where to open the linked document.</p>
+        <p>The <code>target</code> attribute can have one of the following values:</p>
+        
+        <ul>
+            <li><code>_self</code> - Default. Opens the document in the same window/tab as it was clicked</li>
+            <li><code>_blank</code> - Opens the document in a new window or tab</li>
+            <li><code>_parent</code> - Opens the document in the parent frame</li>
+            <li><code>_top</code> - Opens the document in the full body of the window</li>
+        </ul>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <p>Use target="_blank" to open the linked document in a new browser window or tab:</p>
+            <pre><code>&lt;a href="https://www.w3schools.com/" target="_blank"&gt;Visit W3Schools!&lt;/a&gt;</code></pre>
+        </div>
+        
+        <h2>Absolute URLs vs. Relative URLs</h2>
+        <p>Both examples above are using an <strong>absolute URL</strong> (a full web address) in the href attribute.</p>
+        <p>A local link (a link to a page within the same website) is specified with a <strong>relative URL</strong> (without the "https://www" part):</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;h2&gt;Absolute URLs&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://www.w3.org/"&gt;W3C&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.google.com/"&gt;Google&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2&gt;Relative URLs&lt;/h2&gt;
+&lt;p&gt;&lt;a href="html_images.asp"&gt;HTML Images&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="/css/default.asp"&gt;CSS Tutorial&lt;/a&gt;&lt;/p&gt;</code></pre>
+        </div>
+        
+        <h2>HTML Links - Use an Image as a Link</h2>
+        <p>To use an image as a link, just put the <code>&lt;img&gt;</code> tag inside the <code>&lt;a&gt;</code> tag:</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;a href="default.asp"&gt;
+  &lt;img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;"&gt;
+&lt;/a&gt;</code></pre>
+        </div>
+        
+        <h2>Link to an Email Address</h2>
+        <p>Use <code>mailto:</code> inside the <code>href</code> attribute to create a link that opens the user's email program (to let them send a new email):</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;a href="mailto:someone@example.com"&gt;Send email&lt;/a&gt;</code></pre>
+        </div>
+        
+        <h2>Button as a Link</h2>
+        <p>To use an HTML button as a link, you have to add some JavaScript code.</p>
+        <p>JavaScript allows you to specify what happens at certain events, such as a click of a button:</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;button onclick="document.location='default.asp'"&gt;HTML Tutorial&lt;/button&gt;</code></pre>
+        </div>
+        
+        <h2>Link Titles</h2>
+        <p>The <code>title</code> attribute specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element.</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section"&gt;Visit our HTML Tutorial&lt;/a&gt;</code></pre>
+        </div>
+        
+        <div class="practice-section">
+            <h2>Practice Activity</h2>
+            <p>Create different types of links:</p>
+            <ol>
+                <li>Create a link to an external website that opens in a new tab</li>
+                <li>Create a link to an email address</li>
+                <li>Create a link using an image</li>
+                <li>Add a title attribute to provide extra information</li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}

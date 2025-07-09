@@ -1,0 +1,132 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Comments - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="lesson-layout">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+            <li><a href="{{ url_for('main.html_comments') }}" class="active">HTML Comments</a></li>
+        </ul>
+    </div>
+    
+    <div class="lesson-content">
+        <h1>HTML Comments</h1>
+        
+        <div class="tryit-section">
+            <p><strong>HTML comments are not displayed in the browser, but they can help document your HTML source code.</strong></p>
+        </div>
+        
+        <h2>HTML Comment Tag</h2>
+        <p>You can add comments to your HTML source by using the following syntax:</p>
+        
+        <div class="code-example">
+            <pre><code>&lt;!-- Write your comments here --&gt;</code></pre>
+        </div>
+        
+        <p>Notice that there is an exclamation point (!) in the start tag, but not in the end tag.</p>
+        
+        <p><strong>Note:</strong> Comments are not displayed by the browser, but they can help document your HTML source code.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;!-- This is a comment --&gt;
+
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;!-- This is another comment --&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Add Comments</h2>
+        <p>With comments you can place notifications and reminders in your HTML code:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;!-- This is a comment --&gt;
+
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;!-- Remember to add more information here --&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Hide Content</h2>
+        <p>Comments can be used to hide content.</p>
+        <p>This can be helpful if you hide content temporarily:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;!-- &lt;p&gt;This is another paragraph &lt;/p&gt; --&gt;
+
+&lt;p&gt;This is a paragraph too.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <p>You can also hide more than one line. Everything between the <code>&lt;!--</code> and the <code>--&gt;</code> will be hidden from the display.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <p>Hide a section of HTML code:</p>
+            <div class="code-example">
+                <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;!--
+&lt;p&gt;Look at this cool image:&lt;/p&gt;
+&lt;img border="0" src="pic_trulli.jpg" alt="Trulli"&gt;
+--&gt;
+&lt;p&gt;This is a paragraph too.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Hide Inline Content</h2>
+        <p>Comments can be used to hide parts in the middle of the HTML code.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <p>Hide a part of a paragraph:</p>
+            <div class="code-example">
+                <pre><code>&lt;p&gt;This is a &lt;!-- great text --&gt; paragraph.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <div class="activity-section">
+            <h2>Try It Yourself - Activity</h2>
+            <p><strong>Activity:</strong> Create an HTML document that includes:</p>
+            <ul>
+                <li>A comment at the top explaining what the page is about</li>
+                <li>Comments before each section describing what it contains</li>
+                <li>A commented-out paragraph that is hidden from display</li>
+                <li>An inline comment within a paragraph</li>
+            </ul>
+            <p><strong>Meaning:</strong> HTML comments are essential for code documentation, making your HTML easier to understand and maintain. They help other developers (and your future self) understand your code structure and intentions.</p>
+        </div>
+    </div>
+    
+    <div class="navigation">
+        <a href="{{ url_for('main.html_quotations') }}" class="prev">❮ Previous</a>
+        <a href="{{ url_for('main.html_colors') }}" class="next">Next ❯</a>
+    </div>
+</div>
+{% endblock %}

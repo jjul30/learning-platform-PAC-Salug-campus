@@ -1,0 +1,141 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Colors - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="lesson-layout">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+            <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+            <li><a href="{{ url_for('main.html_colors') }}" class="active">HTML Colors</a></li>
+        </ul>
+    </div>
+    
+    <div class="lesson-content">
+        <h1>HTML Colors</h1>
+        
+        <div class="tryit-section">
+            <p><strong>HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.</strong></p>
+        </div>
+        
+        <h2>Color Names</h2>
+        <p>In HTML, a color can be specified by using a color name:</p>
+        
+        <div class="color-examples">
+            <div style="background-color: Tomato; padding: 10px; margin: 5px; color: white;">Tomato</div>
+            <div style="background-color: Orange; padding: 10px; margin: 5px; color: white;">Orange</div>
+            <div style="background-color: DodgerBlue; padding: 10px; margin: 5px; color: white;">DodgerBlue</div>
+            <div style="background-color: MediumSeaGreen; padding: 10px; margin: 5px; color: white;">MediumSeaGreen</div>
+            <div style="background-color: Gray; padding: 10px; margin: 5px; color: white;">Gray</div>
+            <div style="background-color: SlateBlue; padding: 10px; margin: 5px; color: white;">SlateBlue</div>
+            <div style="background-color: Violet; padding: 10px; margin: 5px; color: white;">Violet</div>
+            <div style="background-color: LightGray; padding: 10px; margin: 5px; color: black;">LightGray</div>
+        </div>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;h1 style="background-color:DodgerBlue;"&gt;Hello World&lt;/h1&gt;
+&lt;p style="background-color:Tomato;"&gt;Lorem ipsum...&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Background Color</h2>
+        <p>You can set the background color for HTML elements:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;h1 style="background-color:DodgerBlue;"&gt;Hello World&lt;/h1&gt;
+
+&lt;p style="background-color:Tomato;"&gt;
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Text Color</h2>
+        <p>You can set the color of text:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;h1 style="color:Tomato;"&gt;Hello World&lt;/h1&gt;
+&lt;p style="color:DodgerBlue;"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
+&lt;p style="color:MediumSeaGreen;"&gt;Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Border Color</h2>
+        <p>You can set the color of borders:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;h1 style="border:2px solid Tomato;"&gt;Hello World&lt;/h1&gt;
+&lt;h1 style="border:2px solid DodgerBlue;"&gt;Hello World&lt;/h1&gt;
+&lt;h1 style="border:2px solid Violet;"&gt;Hello World&lt;/h1&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Color Values</h2>
+        <p>In HTML, colors can also be specified using RGB values, HEX values, HSL values, RGBA values, and HSLA values.</p>
+        
+        <p>The following three &lt;div&gt; elements have their background color set with RGB, HEX, and HSL values:</p>
+        
+        <div class="color-examples">
+            <div style="background-color: rgb(255, 99, 71); padding: 10px; margin: 5px; color: white;">rgb(255, 99, 71)</div>
+            <div style="background-color: #ff6347; padding: 10px; margin: 5px; color: white;">#ff6347</div>
+            <div style="background-color: hsl(9, 100%, 64%); padding: 10px; margin: 5px; color: white;">hsl(9, 100%, 64%)</div>
+        </div>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;h1 style="background-color:rgb(255, 99, 71);"&gt;...&lt;/h1&gt;
+&lt;h1 style="background-color:#ff6347;"&gt;...&lt;/h1&gt;
+&lt;h1 style="background-color:hsl(9, 100%, 64%);"&gt;...&lt;/h1&gt;
+
+&lt;p style="background-color:rgba(255, 99, 71, 0.5);"&gt;...&lt;/p&gt;
+&lt;p style="background-color:hsla(9, 100%, 64%, 0.5);"&gt;...&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <div class="activity-section">
+            <h2>Try It Yourself - Activity</h2>
+            <p><strong>Activity:</strong> Create a colorful webpage that includes:</p>
+            <ul>
+                <li>A heading with a color name for the text color</li>
+                <li>A paragraph with an RGB background color</li>
+                <li>A div with a HEX border color</li>
+                <li>Elements using HSL and RGBA values</li>
+                <li>Experiment with different color combinations</li>
+            </ul>
+            <p><strong>Meaning:</strong> Understanding HTML colors is crucial for web design. Different color formats (names, RGB, HEX, HSL) give you flexibility in choosing exact colors and creating visually appealing websites. RGBA and HSLA values allow for transparency effects.</p>
+        </div>
+    </div>
+    
+    <div class="navigation">
+        <a href="{{ url_for('main.html_comments') }}" class="prev">❮ Previous</a>
+        <a href="{{ url_for('main.html_css') }}" class="next">Next ❯</a>
+    </div>
+</div>
+{% endblock %}

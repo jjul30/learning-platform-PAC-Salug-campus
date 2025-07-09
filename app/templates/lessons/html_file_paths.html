@@ -1,0 +1,125 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML File Paths - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+            <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+            <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+            <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+            <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+            <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+            <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+            <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+            <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+            <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+            <li><a href="{{ url_for('main.html_block_inline') }}">HTML Block & Inline</a></li>
+            <li><a href="{{ url_for('main.html_div') }}">HTML Div</a></li>
+            <li><a href="{{ url_for('main.html_classes') }}">HTML Classes</a></li>
+            <li><a href="{{ url_for('main.html_id') }}">HTML Id</a></li>
+            <li><a href="{{ url_for('main.html_iframes') }}">HTML Iframes</a></li>
+            <li><a href="{{ url_for('main.html_javascript') }}">HTML JavaScript</a></li>
+            <li><a href="{{ url_for('main.html_file_paths') }}" class="active">HTML File Paths</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>HTML File Paths</h1>
+        
+        <p>A file path describes the location of a file in a web site's folder structure.</p>
+
+        <h2>File Path Examples</h2>
+        <div class="example">
+            <h3>Example</h3>
+            <table class="reference">
+                <tr>
+                    <th>Path</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td>&lt;img src="picture.jpg"&gt;</td>
+                    <td>The "picture.jpg" file is located in the same folder as the current page</td>
+                </tr>
+                <tr>
+                    <td>&lt;img src="images/picture.jpg"&gt;</td>
+                    <td>The "picture.jpg" file is located in the images folder in the current folder</td>
+                </tr>
+                <tr>
+                    <td>&lt;img src="/images/picture.jpg"&gt;</td>
+                    <td>The "picture.jpg" file is located in the images folder at the root of the current web</td>
+                </tr>
+                <tr>
+                    <td>&lt;img src="../picture.jpg"&gt;</td>
+                    <td>The "picture.jpg" file is located in the folder one level up from the current folder</td>
+                </tr>
+            </table>
+        </div>
+
+        <h2>Absolute File Paths</h2>
+        <p>An absolute file path is the full URL to a file:</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+                &lt;img src="https://www.w3schools.com/images/picture.jpg" alt="Mountain"&gt;
+            </div>
+        </div>
+
+        <h2>Relative File Paths</h2>
+        <p>A relative file path points to a file relative to the current page.</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+                &lt;img src="/images/picture.jpg" alt="Mountain"&gt;
+            </div>
+        </div>
+
+        <h2>Best Practice</h2>
+        <p>It is best practice to use relative file paths (if possible).</p>
+        <p>When using relative file paths, your web pages will not be bound to your current base URL. All links will work on your own computer (localhost) as well as on your current public domain and your future public domains.</p>
+
+        <div class="activity">
+            <h3>Try it Yourself</h3>
+            <p>Create an HTML page with different file path examples:</p>
+            <div class="code">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;File Paths Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;File Paths&lt;/h1&gt;
+    
+    &lt;!-- Relative path --&gt;
+    &lt;img src="images/photo.jpg" alt="Photo"&gt;
+    
+    &lt;!-- Absolute path --&gt;
+    &lt;img src="https://example.com/images/photo.jpg" alt="Photo"&gt;
+    
+    &lt;!-- Parent directory --&gt;
+    &lt;img src="../images/photo.jpg" alt="Photo"&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="{{ url_for('main.html_javascript') }}" class="prev">❮ Previous</a>
+            <a href="{{ url_for('main.html_head') }}" class="next">Next ❯</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

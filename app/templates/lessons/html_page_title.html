@@ -1,0 +1,120 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Page Title - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="lesson-layout">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+            <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+            <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+            <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+            <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+            <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+            <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+            <li><a href="{{ url_for('main.html_page_title') }}" class="active">HTML Page Title</a></li>
+        </ul>
+    </div>
+    
+    <div class="lesson-content">
+        <h1>HTML Page Title</h1>
+        
+        <div class="tryit-section">
+            <p><strong>Every HTML document should have a page title to describe the meaning of the page.</strong></p>
+        </div>
+        
+        <h2>The HTML &lt;title&gt; Element</h2>
+        <p>The <code>&lt;title&gt;</code> element defines the title of the document. The title must be text-only, and it is shown in the browser's title bar or in the page's tab.</p>
+        
+        <p>The <code>&lt;title&gt;</code> element is required in HTML documents!</p>
+        
+        <p>The content of a page title is very important for search engine optimization (SEO)! The page title is used by search engine algorithms to decide the order when listing pages in search results.</p>
+        
+        <p>The <code>&lt;title&gt;</code> element:</p>
+        <ul>
+            <li>defines a title in the browser toolbar</li>
+            <li>provides a title for the page when it is added to favorites</li>
+            <li>displays a title for the page in search engine-results</li>
+        </ul>
+        
+        <p>So, try to make the title as accurate and meaningful as possible!</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <p>A simple HTML document:</p>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;A Meaningful Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+The content of the document......
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        
+        <h2>Tips for Good Titles</h2>
+        <p>So, try to make the title as accurate and meaningful as possible. Here are some tips for creating good titles:</p>
+        
+        <ul>
+            <li>Never leave out the <code>&lt;title&gt;</code> element</li>
+            <li>Make the title describe the content and meaning of the page</li>
+            <li>Avoid one or two-word titles</li>
+            <li>Avoid extremely long title tags</li>
+            <li>Make it readable and human-friendly</li>
+            <li>Make every page title unique and different</li>
+        </ul>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <p>Good title examples:</p>
+            <pre><code>&lt;title&gt;HTML Tutorial - W3Schools&lt;/title&gt;
+&lt;title&gt;Learn JavaScript - Complete Guide&lt;/title&gt;
+&lt;title&gt;Best Chocolate Cake Recipe - Easy and Delicious&lt;/title&gt;</code></pre>
+        </div>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <p>Not so good title examples:</p>
+            <pre><code>&lt;title&gt;HTML&lt;/title&gt;
+&lt;title&gt;Tutorial&lt;/title&gt;
+&lt;title&gt;This is a really really really really really really really really long title that should be shorter&lt;/title&gt;</code></pre>
+        </div>
+        
+        <h2>Dynamic Page Titles</h2>
+        <p>You can change the page title dynamically using JavaScript:</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;script&gt;
+document.title = "New Page Title";
+&lt;/script&gt;</code></pre>
+        </div>
+        
+        <div class="practice-section">
+            <h2>Practice Activity</h2>
+            <p>Create meaningful page titles:</p>
+            <ol>
+                <li>Write a descriptive title for a personal portfolio page</li>
+                <li>Create a title for a recipe website</li>
+                <li>Write a title for a blog post about web development</li>
+                <li>Consider SEO and user experience in your titles</li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}

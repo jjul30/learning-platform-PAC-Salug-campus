@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Quiz - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="quiz-container">
+    <h1>HTML Quiz</h1>
+    <p>Test your HTML knowledge!</p>
+    
+    <form method="POST">
+        <div class="question">
+            <h3>1. What does HTML stand for?</h3>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="a"> Hyper Text Markup Language</li>
+                <li><input type="radio" name="q1" value="b"> High Tech Modern Language</li>
+                <li><input type="radio" name="q1" value="c"> Home Tool Markup Language</li>
+            </ul>
+        </div>
+        
+        <div class="question">
+            <h3>2. Which HTML element is used for the largest heading?</h3>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="a"> &lt;h6&gt;</li>
+                <li><input type="radio" name="q2" value="b"> &lt;h1&gt;</li>
+                <li><input type="radio" name="q2" value="c"> &lt;heading&gt;</li>
+            </ul>
+        </div>
+        
+        <div class="question">
+            <h3>3. Which HTML element is used to create a hyperlink?</h3>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="a"> &lt;link&gt;</li>
+                <li><input type="radio" name="q3" value="b"> &lt;a&gt;</li>
+                <li><input type="radio" name="q3" value="c"> &lt;href&gt;</li>
+            </ul>
+        </div>
+        
+        <button type="submit" class="btn">Submit Quiz</button>
+    </form>
+    
+    <div style="margin-top: 2rem;">
+        <a href="{{ url_for('main.html_intro') }}" class="btn btn-secondary">Back to HTML Lesson</a>
+    </div>
+</div>
+{% endblock %}

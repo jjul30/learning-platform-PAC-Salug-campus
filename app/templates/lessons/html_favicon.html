@@ -1,0 +1,143 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Favicon - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="lesson-layout">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+            <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+            <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+            <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+            <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+            <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+            <li><a href="{{ url_for('main.html_favicon') }}" class="active">HTML Favicon</a></li>
+        </ul>
+    </div>
+    
+    <div class="lesson-content">
+        <h1>HTML Favicon</h1>
+        
+        <div class="tryit-section">
+            <p><strong>A favicon is a small image displayed next to the page title in the browser tab.</strong></p>
+        </div>
+        
+        <h2>What is a Favicon?</h2>
+        <p>A favicon is a small image displayed next to the page title in the browser tab.</p>
+        
+        <h2>How To Add a Favicon in HTML</h2>
+        <p>You can use any image you like as your favicon. You can also create your own favicon on sites like https://www.favicon.cc.</p>
+        
+        <div class="note-section">
+            <p><strong>Tip:</strong> A favicon is a small image, so it should be a simple image with high contrast.</p>
+        </div>
+        
+        <p>A favicon image is displayed to the left of the page title in the browser tab, like this:</p>
+        
+        <p>To add a favicon to your website, either save your favicon image to the root directory of your web server, or create a folder in the root directory called images, and save your favicon image in this folder. A common name for a favicon image is "favicon.ico".</p>
+        
+        <p>Next, add a <code>&lt;link&gt;</code> element to your "index.html" file, after the <code>&lt;title&gt;</code> element, like this:</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My Page Title&lt;/title&gt;
+  &lt;link rel="icon" type="image/x-icon" href="/images/favicon.ico"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a Heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        
+        <p>Now, save the "index.html" file and reload it in your browser. Your browser tab should now display your favicon image to the left of the page title.</p>
+        
+        <h2>Favicon File Format Support</h2>
+        <p>The following table shows the file format support for a favicon image:</p>
+        
+        <table class="reference-table">
+            <tr>
+                <th>Browser</th>
+                <th>ICO</th>
+                <th>PNG</th>
+                <th>GIF</th>
+                <th>JPEG</th>
+                <th>SVG</th>
+            </tr>
+            <tr>
+                <td>Edge</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Chrome</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Firefox</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Opera</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td>Safari</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+        </table>
+        
+        <h2>Chapter Summary</h2>
+        <ul>
+            <li>Use the HTML <code>&lt;link&gt;</code> element to insert a favicon</li>
+        </ul>
+        
+        <div class="practice-section">
+            <h2>Practice Activity</h2>
+            <p>Try adding a favicon to your webpage:</p>
+            <ol>
+                <li>Create or find a small image (16x16 or 32x32 pixels)</li>
+                <li>Save it as favicon.ico in your images folder</li>
+                <li>Add the link element to your HTML head section</li>
+                <li>Test it in your browser</li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,169 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Computer Code Elements - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+            <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+            <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+            <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+            <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+            <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+            <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+            <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+            <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+            <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+            <li><a href="{{ url_for('main.html_block_inline') }}">HTML Block & Inline</a></li>
+            <li><a href="{{ url_for('main.html_div') }}">HTML Div</a></li>
+            <li><a href="{{ url_for('main.html_classes') }}">HTML Classes</a></li>
+            <li><a href="{{ url_for('main.html_id') }}">HTML Id</a></li>
+            <li><a href="{{ url_for('main.html_iframes') }}">HTML Iframes</a></li>
+            <li><a href="{{ url_for('main.html_javascript') }}">HTML JavaScript</a></li>
+            <li><a href="{{ url_for('main.html_file_paths') }}">HTML File Paths</a></li>
+            <li><a href="{{ url_for('main.html_head') }}">HTML Head</a></li>
+            <li><a href="{{ url_for('main.html_layout') }}">HTML Layout</a></li>
+            <li><a href="{{ url_for('main.html_responsive') }}">HTML Responsive</a></li>
+            <li><a href="{{ url_for('main.html_computercode') }}" class="active">HTML Computer Code</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>HTML Computer Code Elements</h1>
+        
+        <p>HTML contains several elements for defining user input and computer code.</p>
+
+        <h2>HTML &lt;kbd&gt; For Keyboard Input</h2>
+        <p>The HTML &lt;kbd&gt; element is used to define keyboard input. The content inside is displayed in the browser's default monospace font.</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;p&gt;Save the document by pressing &lt;kbd&gt;Ctrl + S&lt;/kbd&gt;&lt;/p&gt;
+            </div>
+            <div class="result">
+                <p>Save the document by pressing <kbd>Ctrl + S</kbd></p>
+            </div>
+        </div>
+
+        <h2>HTML &lt;samp&gt; For Program Output</h2>
+        <p>The HTML &lt;samp&gt; element is used to define sample output from a computer program. The content inside is displayed in the browser's default monospace font.</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;p&gt;Message from my computer:&lt;/p&gt;
+&lt;p&gt;&lt;samp&gt;File not found.&lt;br&gt;Press F1 to continue&lt;/samp&gt;&lt;/p&gt;
+            </div>
+            <div class="result">
+                <p>Message from my computer:</p>
+                <p><samp>File not found.<br>Press F1 to continue</samp></p>
+            </div>
+        </div>
+
+        <h2>HTML &lt;code&gt; For Computer Code</h2>
+        <p>The HTML &lt;code&gt; element is used to define a piece of computer code. The content inside is displayed in the browser's default monospace font.</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;code&gt;
+x = 5;
+y = 6;
+z = x + y;
+&lt;/code&gt;
+            </div>
+            <div class="result">
+                <code>
+x = 5;
+y = 6;
+z = x + y;
+                </code>
+            </div>
+        </div>
+
+        <p>Notice that the &lt;code&gt; element does not preserve extra whitespace and line-breaks.</p>
+        <p>To fix this, you can put the &lt;code&gt; element inside a &lt;pre&gt; element:</p>
+
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;pre&gt;
+&lt;code&gt;
+x = 5;
+y = 6;
+z = x + y;
+&lt;/code&gt;
+&lt;/pre&gt;
+            </div>
+            <div class="result">
+                <pre><code>x = 5;
+y = 6;
+z = x + y;</code></pre>
+            </div>
+        </div>
+
+        <h2>HTML &lt;var&gt; For Variables</h2>
+        <p>The HTML &lt;var&gt; element is used to define a variable in programming or in a mathematical expression. The content inside is typically displayed in italic.</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;p&gt;The area of a triangle is: 1/2 x &lt;var&gt;b&lt;/var&gt; x &lt;var&gt;h&lt;/var&gt;, where &lt;var&gt;b&lt;/var&gt; is the base, and &lt;var&gt;h&lt;/var&gt; is the vertical height.&lt;/p&gt;
+            </div>
+            <div class="result">
+                <p>The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.</p>
+            </div>
+        </div>
+
+        <h2>Chapter Summary</h2>
+        <ul>
+            <li>The &lt;kbd&gt; element defines keyboard input</li>
+            <li>The &lt;samp&gt; element defines sample output from a computer program</li>
+            <li>The &lt;code&gt; element defines a piece of computer code</li>
+            <li>The &lt;var&gt; element defines a variable in programming or in a mathematical expression</li>
+            <li>The &lt;pre&gt; element defines preformatted text</li>
+        </ul>
+
+        <div class="activity">
+            <h3>Try it Yourself</h3>
+            <p>Create examples using different computer code elements:</p>
+            <div class="code">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;h2&gt;Computer Code Elements&lt;/h2&gt;
+    
+    &lt;p&gt;Keyboard input: &lt;kbd&gt;Ctrl + C&lt;/kbd&gt;&lt;/p&gt;
+    
+    &lt;p&gt;Computer output: &lt;samp&gt;Hello World!&lt;/samp&gt;&lt;/p&gt;
+    
+    &lt;p&gt;Variable: The value of &lt;var&gt;x&lt;/var&gt; is 10.&lt;/p&gt;
+    
+    &lt;p&gt;Code snippet:&lt;/p&gt;
+    &lt;pre&gt;&lt;code&gt;
+function greet() {
+    console.log("Hello World!");
+}
+    &lt;/code&gt;&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="{{ url_for('main.html_responsive') }}" class="prev">❮ Previous</a>
+            <a href="{{ url_for('main.html_semantics') }}" class="next">Next ❯</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

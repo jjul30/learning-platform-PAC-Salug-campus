@@ -1,0 +1,46 @@
+
+{% extends "base.html" %}
+
+{% block title %}CSS Quiz - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="quiz-container">
+    <h1>CSS Quiz</h1>
+    <p>Test your CSS knowledge!</p>
+    
+    <form method="POST">
+        <div class="question">
+            <h3>1. What does CSS stand for?</h3>
+            <ul class="options">
+                <li><input type="radio" name="q1" value="a"> Cascading Style Sheets</li>
+                <li><input type="radio" name="q1" value="b"> Computer Style Sheets</li>
+                <li><input type="radio" name="q1" value="c"> Creative Style Sheets</li>
+            </ul>
+        </div>
+        
+        <div class="question">
+            <h3>2. Which CSS property is used to change the text color?</h3>
+            <ul class="options">
+                <li><input type="radio" name="q2" value="a"> text-color</li>
+                <li><input type="radio" name="q2" value="b"> color</li>
+                <li><input type="radio" name="q2" value="c"> font-color</li>
+            </ul>
+        </div>
+        
+        <div class="question">
+            <h3>3. How do you select an element with id "header"?</h3>
+            <ul class="options">
+                <li><input type="radio" name="q3" value="a"> .header</li>
+                <li><input type="radio" name="q3" value="b"> #header</li>
+                <li><input type="radio" name="q3" value="c"> header</li>
+            </ul>
+        </div>
+        
+        <button type="submit" class="btn">Submit Quiz</button>
+    </form>
+    
+    <div style="margin-top: 2rem;">
+        <a href="{{ url_for('main.css_intro') }}" class="btn btn-secondary">Back to CSS Lesson</a>
+    </div>
+</div>
+{% endblock %}

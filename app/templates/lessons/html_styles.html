@@ -1,0 +1,211 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Styles - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">HTML HOME</h3>
+            <ul class="sidebar-nav">
+                <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+                <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+                <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+                <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+                <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+                <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+                <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+                <li><a href="{{ url_for('main.html_styles') }}" class="active">HTML Styles</a></li>
+                <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+                <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+                <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+                <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+                <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+                <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+                <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+                <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+                <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+                <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+                <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+                <li><a href="{{ url_for('main.html_block_inline') }}">HTML Block & Inline</a></li>
+                <li><a href="{{ url_for('main.html_div') }}">HTML Div</a></li>
+                <li><a href="{{ url_for('main.html_classes') }}">HTML Classes</a></li>
+                <li><a href="{{ url_for('main.html_id') }}">HTML Id</a></li>
+                <li><a href="{{ url_for('main.html_iframes') }}">HTML Iframes</a></li>
+                <li><a href="{{ url_for('main.html_javascript') }}">HTML JavaScript</a></li>
+                <li><a href="{{ url_for('main.html_file_paths') }}">HTML File Paths</a></li>
+                <li><a href="{{ url_for('main.html_head') }}">HTML Head</a></li>
+                <li><a href="{{ url_for('main.html_layout') }}">HTML Layout</a></li>
+                <li><a href="{{ url_for('main.html_responsive') }}">HTML Responsive</a></li>
+                <li><a href="{{ url_for('main.html_computercode') }}">HTML Computercode</a></li>
+                <li><a href="{{ url_for('main.html_semantics') }}">HTML Semantics</a></li>
+                <li><a href="{{ url_for('main.html_style_guide') }}">HTML Style Guide</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <h1>HTML Styles</h1>
+        
+        <div class="tryit-section">
+            <p><strong>The HTML style attribute is used to add styles to an element, such as color, font, size, and more.</strong></p>
+        </div>
+        
+        <h2>The HTML Style Attribute</h2>
+        <p>Setting the style of an HTML element, can be done with the <code>style</code> attribute.</p>
+        <p>The HTML <code>style</code> attribute has the following syntax:</p>
+        
+        <div class="code-example">
+            <pre><code>&lt;tagname style="property:value;"&gt;</code></pre>
+        </div>
+        
+        <p>The <strong>property</strong> is a CSS property. The <strong>value</strong> is a CSS value.</p>
+        
+        <h2>Background Color</h2>
+        <p>The CSS <code>background-color</code> property defines the background color for an HTML element.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;body style="background-color:powderblue;"&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <p>Set background color for two different elements:</p>
+            <div class="code-example">
+                <pre><code>&lt;h1 style="background-color:powderblue;"&gt;This is a heading&lt;/h1&gt;
+&lt;p style="background-color:tomato;"&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Text Color</h2>
+        <p>The CSS <code>color</code> property defines the text color for an HTML element:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;h1 style="color:blue;"&gt;This is a heading&lt;/h1&gt;
+&lt;p style="color:red;"&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Fonts</h2>
+        <p>The CSS <code>font-family</code> property defines the font to be used for an HTML element:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;h1 style="font-family:verdana;"&gt;This is a heading&lt;/h1&gt;
+&lt;p style="font-family:courier;"&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Text Size</h2>
+        <p>The CSS <code>font-size</code> property defines the text size for an HTML element:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;h1 style="font-size:300%;"&gt;This is a heading&lt;/h1&gt;
+&lt;p style="font-size:160%;"&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Text Alignment</h2>
+        <p>The CSS <code>text-align</code> property defines the horizontal text alignment for an HTML element:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;h1 style="text-align:center;"&gt;Centered Heading&lt;/h1&gt;
+&lt;p style="text-align:center;"&gt;Centered paragraph.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>Activity: Style Your Text</h2>
+        <div class="activity-section">
+            <h3>Practice Exercise:</h3>
+            <p>Create a colorful webpage using inline styles:</p>
+            
+            <div class="code-example">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body style="background-color:lightblue;"&gt;
+
+&lt;h1 style="color:navy; text-align:center; font-family:Arial;"&gt;Welcome to My Page&lt;/h1&gt;
+
+&lt;p style="color:darkgreen; font-size:18px;"&gt;This is a styled paragraph.&lt;/p&gt;
+
+&lt;p style="background-color:yellow; color:red; text-align:center;"&gt;
+This paragraph has background color and centered text.
+&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            
+            <h4>Try modifying:</h4>
+            <ul>
+                <li>Change background colors</li>
+                <li>Try different text colors</li>
+                <li>Experiment with font families (Arial, Verdana, Times)</li>
+                <li>Adjust font sizes (use px or %)</li>
+                <li>Try different text alignments (left, center, right)</li>
+            </ul>
+        </div>
+        
+        <h2>Common CSS Properties:</h2>
+        <table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+            <tr style="background-color: #f2f2f2;">
+                <th style="border: 1px solid #ddd; padding: 8px;">Property</th>
+                <th style="border: 1px solid #ddd; padding: 8px;">Description</th>
+                <th style="border: 1px solid #ddd; padding: 8px;">Example Values</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">color</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Text color</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">red, blue, #FF0000</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">background-color</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Background color</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">yellow, lightblue</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">font-family</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Font type</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Arial, Verdana, Times</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">font-size</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Text size</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">18px, 150%, large</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #ddd; padding: 8px;">text-align</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">Text alignment</td>
+                <td style="border: 1px solid #ddd; padding: 8px;">center, left, right</td>
+            </tr>
+        </table>
+        
+        <div style="margin-top: 2rem;">
+            <a href="{{ url_for('main.html_paragraphs') }}" class="btn btn-secondary">« Previous: HTML Paragraphs</a>
+            <a href="{{ url_for('main.html_formatting') }}" class="btn btn-secondary">Next: HTML Formatting »</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,157 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Responsive Web Design - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+            <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+            <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+            <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+            <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+            <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+            <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+            <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+            <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+            <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+            <li><a href="{{ url_for('main.html_block_inline') }}">HTML Block & Inline</a></li>
+            <li><a href="{{ url_for('main.html_div') }}">HTML Div</a></li>
+            <li><a href="{{ url_for('main.html_classes') }}">HTML Classes</a></li>
+            <li><a href="{{ url_for('main.html_id') }}">HTML Id</a></li>
+            <li><a href="{{ url_for('main.html_iframes') }}">HTML Iframes</a></li>
+            <li><a href="{{ url_for('main.html_javascript') }}">HTML JavaScript</a></li>
+            <li><a href="{{ url_for('main.html_file_paths') }}">HTML File Paths</a></li>
+            <li><a href="{{ url_for('main.html_head') }}">HTML Head</a></li>
+            <li><a href="{{ url_for('main.html_layout') }}">HTML Layout</a></li>
+            <li><a href="{{ url_for('main.html_responsive') }}" class="active">HTML Responsive</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>HTML Responsive Web Design</h1>
+        
+        <p>Responsive web design is about creating web pages that look good on all devices!</p>
+        <p>A responsive web design will automatically adjust for different screen sizes and viewports.</p>
+
+        <h2>What is Responsive Web Design?</h2>
+        <p>Responsive Web Design is about using HTML and CSS to automatically resize, hide, shrink, or enlarge, a website, to make it look good on all devices (desktops, tablets, and phones):</p>
+
+        <h2>Setting The Viewport</h2>
+        <p>To create a responsive website, add the following &lt;meta&gt; tag to all your web pages:</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            </div>
+        </div>
+
+        <p>This will set the viewport of your page, which will give the browser instructions on how to control the page's dimensions and scaling.</p>
+
+        <h2>Responsive Images</h2>
+        <p>Responsive images are images that scale nicely to fit any browser size.</p>
+        
+        <h3>Using the width Property</h3>
+        <p>If the CSS width property is set to 100%, the image will be responsive and scale up and down:</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;img src="img_girl.jpg" style="width:100%;"&gt;
+            </div>
+        </div>
+
+        <h3>Using the max-width Property</h3>
+        <p>If the max-width property is set to 100%, the image will scale down if it has to, but never scale up to be larger than its original size:</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;img src="img_girl.jpg" style="max-width:100%;height:auto;"&gt;
+            </div>
+        </div>
+
+        <h2>Responsive Text Size</h2>
+        <p>The text size can be set with a "vw" unit, which means the "viewport width".</p>
+        <p>That way the text size will follow the size of the browser window:</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;h1 style="font-size:10vw"&gt;Hello World&lt;/h1&gt;
+            </div>
+        </div>
+
+        <h2>Media Queries</h2>
+        <p>In addition to resize text and images, it is also common to use media queries in responsive web pages.</p>
+        <p>With media queries you can define completely different styles for different browser sizes.</p>
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;style&gt;
+.left, .right {
+  float: left;
+  width: 20%; /* The width is 20%, by default */
+}
+
+.main {
+  float: left;
+  width: 60%; /* The width is 60%, by default */
+}
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+  }
+}
+&lt;/style&gt;
+            </div>
+        </div>
+
+        <div class="activity">
+            <h3>Try it Yourself</h3>
+            <p>Create a responsive webpage with proper viewport and responsive elements:</p>
+            <div class="code">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;style&gt;
+        body { font-family: Arial; margin: 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .responsive-image { max-width: 100%; height: auto; }
+        .responsive-text { font-size: 4vw; }
+        
+        @media screen and (max-width: 600px) {
+            .responsive-text { font-size: 8vw; }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container"&gt;
+        &lt;h1 class="responsive-text"&gt;Responsive Design&lt;/h1&gt;
+        &lt;img src="example.jpg" class="responsive-image" alt="Example"&gt;
+        &lt;p&gt;This page adapts to different screen sizes.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="{{ url_for('main.html_layout') }}" class="prev">❮ Previous</a>
+            <a href="{{ url_for('main.html_computercode') }}" class="next">Next ❯</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,217 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Semantic Elements - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+            <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+            <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+            <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+            <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+            <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+            <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+            <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+            <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+            <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+            <li><a href="{{ url_for('main.html_block_inline') }}">HTML Block & Inline</a></li>
+            <li><a href="{{ url_for('main.html_div') }}">HTML Div</a></li>
+            <li><a href="{{ url_for('main.html_classes') }}">HTML Classes</a></li>
+            <li><a href="{{ url_for('main.html_id') }}">HTML Id</a></li>
+            <li><a href="{{ url_for('main.html_iframes') }}">HTML Iframes</a></li>
+            <li><a href="{{ url_for('main.html_javascript') }}">HTML JavaScript</a></li>
+            <li><a href="{{ url_for('main.html_file_paths') }}">HTML File Paths</a></li>
+            <li><a href="{{ url_for('main.html_head') }}">HTML Head</a></li>
+            <li><a href="{{ url_for('main.html_layout') }}">HTML Layout</a></li>
+            <li><a href="{{ url_for('main.html_responsive') }}">HTML Responsive</a></li>
+            <li><a href="{{ url_for('main.html_computercode') }}">HTML Computer Code</a></li>
+            <li><a href="{{ url_for('main.html_semantics') }}" class="active">HTML Semantics</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>HTML Semantic Elements</h1>
+        
+        <p>Semantic elements = elements with a meaning.</p>
+
+        <h2>What are Semantic Elements?</h2>
+        <p>A semantic element clearly describes its meaning to both the browser and the developer.</p>
+        
+        <p>Examples of <strong>non-semantic</strong> elements: &lt;div&gt; and &lt;span&gt; - Tells nothing about its content.</p>
+        
+        <p>Examples of <strong>semantic</strong> elements: &lt;form&gt;, &lt;table&gt;, and &lt;article&gt; - Clearly defines its content.</p>
+
+        <h2>Semantic Elements in HTML</h2>
+        <p>Many web sites contain HTML code like: &lt;div id="nav"&gt; &lt;div class="header"&gt; &lt;div id="footer"&gt; to indicate navigation, header, and footer.</p>
+        
+        <p>In HTML there are some semantic elements that can be used to define different parts of a web page:</p>
+        
+        <ul>
+            <li>&lt;article&gt;</li>
+            <li>&lt;aside&gt;</li>
+            <li>&lt;details&gt;</li>
+            <li>&lt;figcaption&gt;</li>
+            <li>&lt;figure&gt;</li>
+            <li>&lt;footer&gt;</li>
+            <li>&lt;header&gt;</li>
+            <li>&lt;main&gt;</li>
+            <li>&lt;mark&gt;</li>
+            <li>&lt;nav&gt;</li>
+            <li>&lt;section&gt;</li>
+            <li>&lt;summary&gt;</li>
+            <li>&lt;time&gt;</li>
+        </ul>
+
+        <h2>HTML &lt;section&gt; Element</h2>
+        <p>The &lt;section&gt; element defines a section in a document.</p>
+        <p>According to W3C's HTML documentation: "A section is a thematic grouping of content, typically with a heading."</p>
+        
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;section&gt;
+  &lt;h1&gt;WWF&lt;/h1&gt;
+  &lt;p&gt;The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.&lt;/p&gt;
+&lt;/section&gt;
+
+&lt;section&gt;
+  &lt;h1&gt;WWF's Panda symbol&lt;/h1&gt;
+  &lt;p&gt;The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.&lt;/p&gt;
+&lt;/section&gt;
+            </div>
+        </div>
+
+        <h2>HTML &lt;article&gt; Element</h2>
+        <p>The &lt;article&gt; element specifies independent, self-contained content.</p>
+        <p>An article should make sense on its own and it should be possible to distribute it independently from the rest of the site.</p>
+        
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;article&gt;
+  &lt;h2&gt;Google Chrome&lt;/h2&gt;
+  &lt;p&gt;Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!&lt;/p&gt;
+&lt;/article&gt;
+
+&lt;article&gt;
+  &lt;h2&gt;Mozilla Firefox&lt;/h2&gt;
+  &lt;p&gt;Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.&lt;/p&gt;
+&lt;/article&gt;
+            </div>
+        </div>
+
+        <h2>HTML &lt;header&gt; Element</h2>
+        <p>The &lt;header&gt; element represents a container for introductory content or a set of navigational links.</p>
+        
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;article&gt;
+  &lt;header&gt;
+    &lt;h1&gt;What Does WWF Do?&lt;/h1&gt;
+    &lt;p&gt;WWF's mission:&lt;/p&gt;
+  &lt;/header&gt;
+  &lt;p&gt;WWF's mission is to stop the degradation of our planet's natural environment, and build a future in which humans live in harmony with nature.&lt;/p&gt;
+&lt;/article&gt;
+            </div>
+        </div>
+
+        <h2>HTML &lt;footer&gt; Element</h2>
+        <p>The &lt;footer&gt; element defines a footer for a document or section.</p>
+        
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;footer&gt;
+  &lt;p&gt;Author: Hege Refsnes&lt;/p&gt;
+  &lt;p&gt;&lt;a href="mailto:hege@example.com"&gt;hege@example.com&lt;/a&gt;&lt;/p&gt;
+&lt;/footer&gt;
+            </div>
+        </div>
+
+        <h2>HTML &lt;nav&gt; Element</h2>
+        <p>The &lt;nav&gt; element defines a set of navigation links.</p>
+        
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;nav&gt;
+  &lt;a href="/html/"&gt;HTML&lt;/a&gt; |
+  &lt;a href="/css/"&gt;CSS&lt;/a&gt; |
+  &lt;a href="/js/"&gt;JavaScript&lt;/a&gt; |
+  &lt;a href="/jquery/"&gt;jQuery&lt;/a&gt;
+&lt;/nav&gt;
+            </div>
+        </div>
+
+        <h2>HTML &lt;aside&gt; Element</h2>
+        <p>The &lt;aside&gt; element defines some content aside from the content it is placed in (like a sidebar).</p>
+        
+        <div class="example">
+            <h3>Example</h3>
+            <div class="code">
+&lt;p&gt;My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great day there. My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great day there.&lt;/p&gt;
+
+&lt;aside&gt;
+  &lt;h4&gt;Epcot Center&lt;/h4&gt;
+  &lt;p&gt;Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.&lt;/p&gt;
+&lt;/aside&gt;
+            </div>
+        </div>
+
+        <div class="activity">
+            <h3>Try it Yourself</h3>
+            <p>Create a semantic HTML document structure:</p>
+            <div class="code">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;My Blog&lt;/h1&gt;
+        &lt;nav&gt;
+            &lt;a href="#home"&gt;Home&lt;/a&gt;
+            &lt;a href="#about"&gt;About&lt;/a&gt;
+            &lt;a href="#contact"&gt;Contact&lt;/a&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;h2&gt;Article Title&lt;/h2&gt;
+            &lt;p&gt;Article content goes here...&lt;/p&gt;
+        &lt;/article&gt;
+        
+        &lt;aside&gt;
+            &lt;h3&gt;Sidebar&lt;/h3&gt;
+            &lt;p&gt;Additional information...&lt;/p&gt;
+        &lt;/aside&gt;
+    &lt;/main&gt;
+    
+    &lt;footer&gt;
+        &lt;p&gt;© 2024 My Blog&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="{{ url_for('main.html_computercode') }}" class="prev">❮ Previous</a>
+            <a href="{{ url_for('main.html_style_guide') }}" class="next">Next ❯</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

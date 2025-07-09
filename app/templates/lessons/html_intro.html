@@ -1,0 +1,126 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Introduction - PAC CSIT Salug Campus{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="lesson-sidebar">
+                <div class="sidebar-title">HTML Tutorial</div>
+                <ul class="lesson-nav">
+                    <li><a href="{{ url_for('main.html_intro') }}" class="active">HTML Introduction</a></li>
+                    <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+                    <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+                    <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+                    <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+                    <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+                    <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+                    <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+                    <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+                    <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+                    <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+                    <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+                    <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+                    <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+                    <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+                    <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+                    <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="col-lg-9">
+            <div class="lesson-content">
+                <h1>HTML Introduction</h1>
+                
+                <div class="alert alert-success" role="alert">
+                    <strong>HTML is the standard markup language for Web pages.</strong><br>
+                    With HTML you can create your own Website.
+                </div>
+                
+                <h2>What is HTML?</h2>
+                <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item">HTML stands for Hyper Text Markup Language</li>
+                    <li class="list-group-item">HTML is the standard markup language for creating Web pages</li>
+                    <li class="list-group-item">HTML describes the structure of a Web page</li>
+                    <li class="list-group-item">HTML consists of a series of elements</li>
+                    <li class="list-group-item">HTML elements tell the browser how to display the content</li>
+                </ul>
+                
+                <h2>A Simple HTML Document</h2>
+                <div class="card mb-4">
+                    <div class="card-header bg-light">
+                        <strong>Example</strong>
+                    </div>
+                    <div class="card-body">
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Heading&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-success btn-sm">Try it Yourself »</button>
+                    </div>
+                </div>
+                
+                <h2>Example Explained</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <td><code>&lt;!DOCTYPE html&gt;</code></td>
+                                    <td>Declares this document to be HTML5</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;html&gt;</code></td>
+                                    <td>The root element of an HTML page</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;head&gt;</code></td>
+                                    <td>Contains meta information about the HTML page</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;title&gt;</code></td>
+                                    <td>Specifies a title for the HTML page</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;body&gt;</code></td>
+                                    <td>Defines the document's body</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;h1&gt;</code></td>
+                                    <td>Defines a large heading</td>
+                                </tr>
+                                <tr>
+                                    <td><code>&lt;p&gt;</code></td>
+                                    <td>Defines a paragraph</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="alert alert-info" role="alert">
+                    <strong>Note:</strong> Only the content inside the &lt;body&gt; section is displayed in a browser.
+                </div>
+                
+                <div class="navigation">
+                    <a href="{{ url_for('main.index') }}" class="btn btn-outline-success">❮ Home</a>
+                    <a href="{{ url_for('main.html_editors') }}" class="btn btn-success">Next: HTML Editors ❯</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

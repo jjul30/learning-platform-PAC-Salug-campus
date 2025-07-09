@@ -1,0 +1,185 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Attributes - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">HTML HOME</h3>
+            <ul class="sidebar-nav">
+                <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+                <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+                <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+                <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+                <li><a href="{{ url_for('main.html_attributes') }}" class="active">HTML Attributes</a></li>
+                <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+                <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+                <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+                <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+                <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+                <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+                <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+                <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+                <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+                <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+                <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+                <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+                <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+                <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+                <li><a href="{{ url_for('main.html_block_inline') }}">HTML Block & Inline</a></li>
+                <li><a href="{{ url_for('main.html_div') }}">HTML Div</a></li>
+                <li><a href="{{ url_for('main.html_classes') }}">HTML Classes</a></li>
+                <li><a href="{{ url_for('main.html_id') }}">HTML Id</a></li>
+                <li><a href="{{ url_for('main.html_iframes') }}">HTML Iframes</a></li>
+                <li><a href="{{ url_for('main.html_javascript') }}">HTML JavaScript</a></li>
+                <li><a href="{{ url_for('main.html_file_paths') }}">HTML File Paths</a></li>
+                <li><a href="{{ url_for('main.html_head') }}">HTML Head</a></li>
+                <li><a href="{{ url_for('main.html_layout') }}">HTML Layout</a></li>
+                <li><a href="{{ url_for('main.html_responsive') }}">HTML Responsive</a></li>
+                <li><a href="{{ url_for('main.html_computercode') }}">HTML Computercode</a></li>
+                <li><a href="{{ url_for('main.html_semantics') }}">HTML Semantics</a></li>
+                <li><a href="{{ url_for('main.html_style_guide') }}">HTML Style Guide</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="lesson-content">
+        <h1>HTML Attributes</h1>
+        
+        <div class="tryit-section">
+            <p><strong>HTML attributes provide additional information about HTML elements.</strong></p>
+        </div>
+        
+        <h2>HTML Attributes</h2>
+        <ul>
+            <li>All HTML elements can have <strong>attributes</strong></li>
+            <li>Attributes provide <strong>additional information</strong> about elements</li>
+            <li>Attributes are always specified in <strong>the start tag</strong></li>
+            <li>Attributes usually come in name/value pairs like: <strong>name="value"</strong></li>
+        </ul>
+        
+        <h2>The href Attribute</h2>
+        <p>The <code>&lt;a&gt;</code> tag defines a hyperlink. The <code>href</code> attribute specifies the URL of the page the link goes to:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;a href="https://www.w3schools.com"&gt;Visit W3Schools&lt;/a&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>The src Attribute</h2>
+        <p>The <code>&lt;img&gt;</code> tag is used to embed an image in an HTML page. The <code>src</code> attribute specifies the path to the image to be displayed:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;img src="img_girl.jpg"&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <p>There are two ways to specify the URL in the <code>src</code> attribute:</p>
+        
+        <p><strong>1. Absolute URL</strong> - Links to an external image that is hosted on another website. Example: src="https://www.w3schools.com/images/img_girl.jpg".</p>
+        
+        <p><strong>Notes:</strong> External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws. In addition, you cannot control external images; it can suddenly be removed or changed.</p>
+        
+        <p><strong>2. Relative URL</strong> - Links to an image that is hosted within the website. Here, the URL does not include the domain name. If the URL begins without a slash, it will be relative to the current page. Example: src="img_girl.jpg". If the URL begins with a slash, it will be relative to the domain. Example: src="/images/img_girl.jpg".</p>
+        
+        <p><strong>Tip:</strong> It is almost always best to use relative URLs. They will not break if you change domain.</p>
+        
+        <h2>The width and height Attributes</h2>
+        <p>The <code>&lt;img&gt;</code> tag should also contain the <code>width</code> and <code>height</code> attributes, which specify the width and height of the image (in pixels):</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;img src="img_girl.jpg" width="500" height="600"&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>The alt Attribute</h2>
+        <p>The required <code>alt</code> attribute for the <code>&lt;img&gt;</code> tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to a slow connection, or an error in the <code>src</code> attribute, or if the user uses a screen reader.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;img src="img_girl.jpg" alt="Girl with a jacket"&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>The style Attribute</h2>
+        <p>The <code>style</code> attribute is used to add styles to an element, such as color, font, size, and more.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;p style="color:red;"&gt;This is a red paragraph.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>The lang Attribute</h2>
+        <p>You should always include the <code>lang</code> attribute inside the <code>&lt;html&gt;</code> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;body&gt;
+...
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>The title Attribute</h2>
+        <p>The <code>title</code> attribute defines some extra information about an element.</p>
+        <p>The value of the title attribute will be displayed as a tooltip when you mouse over the element:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;p title="I'm a tooltip"&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>We Suggest: Always Use Lowercase Attributes</h2>
+        <p>The HTML standard does not require lowercase attribute names.</p>
+        <p>The title attribute (and all other attributes) can be written with uppercase or lowercase like <strong>title</strong> or <strong>TITLE</strong>.</p>
+        <p>However, W3C <strong>recommends</strong> lowercase attributes in HTML, and <strong>demands</strong> lowercase attributes for stricter document types like XHTML.</p>
+        
+        <h2>We Suggest: Always Quote Attribute Values</h2>
+        <p>The HTML standard does not require quotes around attribute values.</p>
+        <p>However, W3C <strong>recommends</strong> quotes in HTML, and <strong>demands</strong> quotes for stricter document types like XHTML.</p>
+        
+        <div class="tryit-example">
+            <h3>Good:</h3>
+            <div class="code-example">
+                <pre><code>&lt;a href="https://www.w3schools.com/html/"&gt;Visit our HTML tutorial&lt;/a&gt;</code></pre>
+            </div>
+        </div>
+        
+        <div class="tryit-example">
+            <h3>Bad:</h3>
+            <div class="code-example">
+                <pre><code>&lt;a href=https://www.w3schools.com/html/&gt;Visit our HTML tutorial&lt;/a&gt;</code></pre>
+            </div>
+        </div>
+        
+        <div style="margin-top: 2rem;">
+            <a href="{{ url_for('main.html_elements') }}" class="btn btn-secondary">« Previous: HTML Elements</a>
+            <a href="{{ url_for('main.html_headings') }}" class="btn btn-secondary">Next: HTML Headings »</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

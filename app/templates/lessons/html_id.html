@@ -1,0 +1,177 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Id Attribute - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <div class="sidebar-section">
+            <h3 class="sidebar-title">HTML HOME</h3>
+            <ul class="sidebar-nav">
+                <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+                <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+                <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+                <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+                <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+                <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+                <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+                <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+                <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+                <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+                <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+                <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+                <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+                <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+                <li><a href="{{ url_for('main.html_images') }}">HTML Images</a></li>
+                <li><a href="{{ url_for('main.html_favicon') }}">HTML Favicon</a></li>
+                <li><a href="{{ url_for('main.html_page_title') }}">HTML Page Title</a></li>
+                <li><a href="{{ url_for('main.html_tables') }}">HTML Tables</a></li>
+                <li><a href="{{ url_for('main.html_lists') }}">HTML Lists</a></li>
+                <li><a href="{{ url_for('main.html_block_inline') }}">HTML Block & Inline</a></li>
+                <li><a href="{{ url_for('main.html_div') }}">HTML Div</a></li>
+                <li><a href="{{ url_for('main.html_classes') }}">HTML Classes</a></li>
+                <li><a href="{{ url_for('main.html_id') }}" class="active">HTML Id</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>HTML id Attribute</h1>
+        
+        <p>The HTML <code>id</code> attribute is used to specify a unique id for an HTML element.</p>
+        <p>You cannot have more than one element with the same id in an HTML document.</p>
+        
+        <h2>Using The id Attribute</h2>
+        <p>The <code>id</code> attribute specifies a unique id for an HTML element. The value of the <code>id</code> attribute must be unique within the HTML document.</p>
+        <p>The <code>id</code> attribute is used to point to a specific style declaration in a style sheet. It is also used by JavaScript to access and manipulate the element with the specific id.</p>
+        <p>The syntax for id is: write a hash character (#), followed by an id name. Then, define the CSS properties within curly braces {}.</p>
+        
+        <div class="tryit-example">
+            <h3>In the following example we have an &lt;h1&gt; element that points to the id name "myHeader". This &lt;h1&gt; element will be styled according to the #myHeader style definition in the head section:</h3>
+            <div class="code-example">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1 id="myHeader"&gt;My Header&lt;/h1&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <div class="note-section">
+            <p><strong>Note:</strong> The id name is case sensitive!</p>
+            <p><strong>Note:</strong> The id name must contain at least one character, cannot start with a number, and must not contain whitespaces (spaces, tabs, etc.).</p>
+        </div>
+        
+        <h2>Difference Between Class and ID</h2>
+        <p>A class name can be used by multiple HTML elements, while an id name must only be used by one HTML element within the page:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;style&gt;
+/* Style the element with the id "myHeader" */
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Style all elements with the class name "city" */
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+}
+&lt;/style&gt;
+
+&lt;!-- An element with a unique id --&gt;
+&lt;h1 id="myHeader"&gt;My Cities&lt;/h1&gt;
+
+&lt;!-- Multiple elements with same class --&gt;
+&lt;h2 class="city"&gt;London&lt;/h2&gt;
+&lt;p&gt;London is the capital of England.&lt;/p&gt;
+
+&lt;h2 class="city"&gt;Paris&lt;/h2&gt;
+&lt;p&gt;Paris is the capital of France.&lt;/p&gt;
+
+&lt;h2 class="city"&gt;Tokyo&lt;/h2&gt;
+&lt;p&gt;Tokyo is the capital of Japan.&lt;/p&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <h2>HTML Bookmarks with ID and Links</h2>
+        <p>HTML bookmarks are used to allow readers to jump to specific parts of a webpage.</p>
+        <p>Bookmarks can be useful if your page is very long.</p>
+        <p>To use a bookmark, you must first create it, and then add a link to it.</p>
+        <p>Then, when the link is clicked, the page will scroll to the location with the bookmark.</p>
+        
+        <h3>Example</h3>
+        <p>First, create a bookmark with the <code>id</code> attribute:</p>
+        <div class="code-example">
+            <pre><code>&lt;h2 id="C4"&gt;Chapter 4&lt;/h2&gt;</code></pre>
+        </div>
+        
+        <p>Then, add a link to the bookmark ("Jump to Chapter 4"), from within the same page:</p>
+        <div class="code-example">
+            <pre><code>&lt;a href="#C4"&gt;Jump to Chapter 4&lt;/a&gt;</code></pre>
+        </div>
+        
+        <p>Or, add a link to the bookmark ("Jump to Chapter 4"), from another page:</p>
+        <div class="code-example">
+            <pre><code>&lt;a href="html_demo.html#C4"&gt;Jump to Chapter 4&lt;/a&gt;</code></pre>
+        </div>
+        
+        <h2>Using The id Attribute in JavaScript</h2>
+        <p>The <code>id</code> attribute can also be used by JavaScript to perform some tasks for that specific element.</p>
+        <p>JavaScript can access an element with a specific id with the <code>getElementById()</code> method:</p>
+        
+        <div class="tryit-example">
+            <h3>Example</h3>
+            <div class="code-example">
+                <pre><code>&lt;script&gt;
+function displayResult() {
+  document.getElementById("myHeader").innerHTML = "Have a nice day!";
+}
+&lt;/script&gt;</code></pre>
+            </div>
+            <button class="tryit-btn">Try it Yourself »</button>
+        </div>
+        
+        <div class="note-section">
+            <p><strong>Tip:</strong> Study JavaScript in the HTML JavaScript chapter, or in our JavaScript Tutorial.</p>
+        </div>
+        
+        <h2>Chapter Summary</h2>
+        <ul>
+            <li>The <code>id</code> attribute is used to specify a unique id for an HTML element</li>
+            <li>The value of the <code>id</code> attribute must be unique within the HTML document</li>
+            <li>The <code>id</code> attribute is used by CSS and JavaScript to style/select the element with the specific id</li>
+            <li>The value of the <code>id</code> attribute is case sensitive</li>
+            <li>The <code>id</code> attribute is also used to create HTML bookmarks</li>
+            <li>JavaScript can access an element with a specific id with the <code>getElementById()</code> method</li>
+        </ul>
+        
+        <div style="margin-top: 2rem;">
+            <a href="{{ url_for('main.html_classes') }}" class="btn btn-secondary">« Previous: HTML Classes</a>
+            <a href="{{ url_for('main.html_iframes') }}" class="btn btn-secondary">Next: HTML Iframes »</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,208 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML CSS - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="lesson-layout">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+            <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+            <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+            <li><a href="{{ url_for('main.html_css') }}" class="active">HTML CSS</a></li>
+        </ul>
+    </div>
+    
+    <div class="lesson-content">
+        <h1>HTML CSS</h1>
+        
+        <div class="tryit-section">
+            <p><strong>CSS stands for Cascading Style Sheets.</strong></p>
+            <p><strong>CSS saves a lot of work. It can control the layout of multiple web pages all at once.</strong></p>
+        </div>
+        
+        <h2>What is CSS?</h2>
+        <p>Cascading Style Sheets (CSS) is used to format the layout of a webpage.</p>
+        <p>With CSS, you can control the color, font, the size of text, the spacing between elements, how elements are positioned and laid out, what background images or background colors are to be used, different displays for different devices and screen sizes, and much more!</p>
+        
+        <div class="note-section">
+            <p><strong>Tip:</strong> The word <strong>cascading</strong> means that a style applied to a parent element will also apply to all children elements within the parent. So, if you set the color of the body text to "blue", all headings, paragraphs, and other text elements within the body will also get the same color (unless you specify something else)!</p>
+        </div>
+        
+        <h2>Using CSS</h2>
+        <p>CSS can be added to HTML documents in 3 ways:</p>
+        <ul>
+            <li><strong>Inline</strong> - by using the style attribute inside HTML elements</li>
+            <li><strong>Internal</strong> - by using a &lt;style&gt; element in the &lt;head&gt; section</li>
+            <li><strong>External</strong> - by using a &lt;link&gt; element to link to an external CSS file</li>
+        </ul>
+        
+        <p>The most common way to add CSS, is to keep the styles in external CSS files. However, in this tutorial we will use inline and internal styles, because this is easier to demonstrate, and easier for you to try it yourself.</p>
+        
+        <h2>Inline CSS</h2>
+        <p>An inline CSS is used to apply a unique style to a single HTML element.</p>
+        <p>An inline CSS uses the style attribute of an HTML element.</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;h1 style="color:blue;"&gt;A Blue Heading&lt;/h1&gt;
+
+&lt;p style="color:red;"&gt;A red paragraph.&lt;/p&gt;</code></pre>
+        </div>
+        
+        <h2>Internal CSS</h2>
+        <p>An internal CSS is used to define a style for a single HTML page.</p>
+        <p>An internal CSS is defined in the &lt;head&gt; section of an HTML page, within a &lt;style&gt; element.</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background-color: linen;
+}
+
+h1 {
+  color: maroon;
+  margin-left: 40px;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        
+        <h2>External CSS</h2>
+        <p>An external style sheet is used to define the style for many HTML pages.</p>
+        <p>To use an external style sheet, add a link to it in the &lt;head&gt; section of each HTML page:</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="mystyle.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        
+        <p>The external style sheet can be written in any text editor. The file must not contain any HTML code, and must be saved with a .css extension.</p>
+        
+        <div class="code-example">
+            <h3>Here is what the "mystyle.css" file looks like:</h3>
+            <pre><code>body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: navy;
+  margin-left: 20px;
+}</code></pre>
+        </div>
+        
+        <div class="note-section">
+            <p><strong>Tip:</strong> With an external style sheet, you can change the look of an entire website by changing just one file!</p>
+        </div>
+        
+        <h2>CSS Colors, Fonts and Sizes</h2>
+        <p>Here, we will demonstrate some commonly used CSS properties. You will learn more about them later.</p>
+        
+        <p>The CSS <code>color</code> property defines the text color to be used.</p>
+        <p>The CSS <code>font-family</code> property defines the font to be used.</p>
+        <p>The CSS <code>font-size</code> property defines the text size to be used.</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+h1 {
+  color: blue;
+  font-family: verdana;
+  font-size: 300%;
+}
+p {
+  color: red;
+  font-family: courier;
+  font-size: 160%;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        
+        <h2>CSS Border</h2>
+        <p>The CSS <code>border</code> property defines a border around an HTML element.</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>p {
+  border: 2px solid powderblue;
+}</code></pre>
+        </div>
+        
+        <h2>CSS Padding</h2>
+        <p>The CSS <code>padding</code> property defines a padding (space) between the text and the border.</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>p {
+  border: 2px solid powderblue;
+  padding: 30px;
+}</code></pre>
+        </div>
+        
+        <h2>CSS Margin</h2>
+        <p>The CSS <code>margin</code> property defines a margin (space) outside the border.</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>p {
+  border: 2px solid powderblue;
+  margin: 50px;
+}</code></pre>
+        </div>
+        
+        <div class="practice-section">
+            <h2>Practice Activity</h2>
+            <p>Try creating an HTML page with different CSS styles:</p>
+            <ol>
+                <li>Create a heading with blue color and large font size</li>
+                <li>Add a paragraph with red text and border</li>
+                <li>Use padding and margin to space elements</li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}

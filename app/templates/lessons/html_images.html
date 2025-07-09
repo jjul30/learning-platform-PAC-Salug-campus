@@ -1,0 +1,197 @@
+
+{% extends "base.html" %}
+
+{% block title %}HTML Images - W3Schools Clone{% endblock %}
+
+{% block content %}
+<div class="lesson-layout">
+    <div class="sidebar">
+        <h3>HTML Tutorial</h3>
+        <ul>
+            <li><a href="{{ url_for('main.html_intro') }}">HTML Introduction</a></li>
+            <li><a href="{{ url_for('main.html_editors') }}">HTML Editors</a></li>
+            <li><a href="{{ url_for('main.html_basic') }}">HTML Basic</a></li>
+            <li><a href="{{ url_for('main.html_elements') }}">HTML Elements</a></li>
+            <li><a href="{{ url_for('main.html_attributes') }}">HTML Attributes</a></li>
+            <li><a href="{{ url_for('main.html_headings') }}">HTML Headings</a></li>
+            <li><a href="{{ url_for('main.html_paragraphs') }}">HTML Paragraphs</a></li>
+            <li><a href="{{ url_for('main.html_styles') }}">HTML Styles</a></li>
+            <li><a href="{{ url_for('main.html_formatting') }}">HTML Formatting</a></li>
+            <li><a href="{{ url_for('main.html_quotations') }}">HTML Quotations</a></li>
+            <li><a href="{{ url_for('main.html_comments') }}">HTML Comments</a></li>
+            <li><a href="{{ url_for('main.html_colors') }}">HTML Colors</a></li>
+            <li><a href="{{ url_for('main.html_css') }}">HTML CSS</a></li>
+            <li><a href="{{ url_for('main.html_links') }}">HTML Links</a></li>
+            <li><a href="{{ url_for('main.html_images') }}" class="active">HTML Images</a></li>
+        </ul>
+    </div>
+    
+    <div class="lesson-content">
+        <h1>HTML Images</h1>
+        
+        <div class="tryit-section">
+            <p><strong>Images can improve the design and the appearance of a web page.</strong></p>
+        </div>
+        
+        <h2>HTML Images Syntax</h2>
+        <p>The HTML <code>&lt;img&gt;</code> tag is used to embed an image in a web page.</p>
+        <p>Images are not technically inserted into a web page; images are linked to web pages. The <code>&lt;img&gt;</code> tag creates a holding space for the referenced image.</p>
+        <p>The <code>&lt;img&gt;</code> tag is empty, it contains attributes only, and does not have a closing tag.</p>
+        <p>The <code>&lt;img&gt;</code> tag has two required attributes:</p>
+        
+        <ul>
+            <li><code>src</code> - Specifies the path to the image</li>
+            <li><code>alt</code> - Specifies an alternate text for the image</li>
+        </ul>
+        
+        <div class="code-example">
+            <h3>Syntax</h3>
+            <pre><code>&lt;img src="url" alt="alternatetext"&gt;</code></pre>
+        </div>
+        
+        <h2>The src Attribute</h2>
+        <p>The required <code>src</code> attribute specifies the path (URL) to the image.</p>
+        
+        <div class="note-section">
+            <p><strong>Note:</strong> When a web page loads, it is the browser, at that moment, that gets the image from a web server and inserts it into the page. Therefore, make sure that the image actually stays in the same spot in relation to the web page, otherwise your visitors will get a broken link icon. The broken link icon and the alt text are shown if the browser cannot find the image.</p>
+        </div>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;img src="img_chania.jpg" alt="Flowers in Chania"&gt;</code></pre>
+        </div>
+        
+        <h2>The alt Attribute</h2>
+        <p>The required <code>alt</code> attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader).</p>
+        <p>The value of the <code>alt</code> attribute should describe the image:</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;img src="img_girl.jpg" alt="Girl in a jacket"&gt;</code></pre>
+        </div>
+        
+        <p>If a browser cannot find an image, it will display the value of the <code>alt</code> attribute:</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;img src="wrongname.gif" alt="HTML5 Icon"&gt;</code></pre>
+        </div>
+        
+        <div class="note-section">
+            <p><strong>Tip:</strong> A screen reader is a software program that reads the HTML code, and allows the user to "listen" to the content. Screen readers are useful for people who are visually impaired or learning disabled.</p>
+        </div>
+        
+        <h2>Image Size - Width and Height</h2>
+        <p>You can use the <code>style</code> attribute to specify the width and height of an image.</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;"&gt;</code></pre>
+        </div>
+        
+        <p>Alternatively, you can use the <code>width</code> and <code>height</code> attributes:</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600"&gt;</code></pre>
+        </div>
+        
+        <p>The <code>width</code> and <code>height</code> attributes always define the width and height of the image in pixels.</p>
+        
+        <div class="note-section">
+            <p><strong>Note:</strong> Always specify the width and height of an image. If width and height are not specified, the web page might flicker while the image loads.</p>
+        </div>
+        
+        <h2>Width and Height, or Style?</h2>
+        <p>The <code>width</code>, <code>height</code>, and <code>style</code> attributes are all valid in HTML.</p>
+        <p>However, we suggest using the <code>style</code> attribute. It prevents styles sheets from changing the size of images:</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+img {
+  width: 100%;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;img src="html5.gif" alt="HTML5 Icon" width="128" height="128"&gt;
+
+&lt;img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;"&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+        
+        <h2>Images in Another Folder</h2>
+        <p>If you have your images in a sub-folder, you must include the folder name in the <code>src</code> attribute:</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;img src="/images/img_girl.jpg" alt="Girl in a jacket"&gt;</code></pre>
+        </div>
+        
+        <h2>Images on Another Server/Website</h2>
+        <p>Some web sites point to an image on another server.</p>
+        <p>To point to an image on another server, you must specify an absolute (full) URL in the <code>src</code> attribute:</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com"&gt;</code></pre>
+        </div>
+        
+        <div class="note-section">
+            <p><strong>Notes on external images:</strong> External images might be under copyright. If you do not get permission to use it, you may be in violation of copyright laws. In addition, you cannot control external images; they can suddenly be removed or changed.</p>
+        </div>
+        
+        <h2>Animated Images</h2>
+        <p>HTML allows animated GIFs:</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;img src="programming.gif" alt="Computer Man"&gt;</code></pre>
+        </div>
+        
+        <h2>Image as a Link</h2>
+        <p>To use an image as a link, put the <code>&lt;img&gt;</code> tag inside the <code>&lt;a&gt;</code> tag:</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;a href="default.asp"&gt;
+  &lt;img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;"&gt;
+&lt;/a&gt;</code></pre>
+        </div>
+        
+        <h2>Image Floating</h2>
+        <p>Use the CSS <code>float</code> property to let the image float to the right or to the left of a text:</p>
+        
+        <div class="code-example">
+            <h3>Example</h3>
+            <pre><code>&lt;p&gt;&lt;img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;"&gt;
+The image will float to the right of the text.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;"&gt;
+The image will float to the left of the text.&lt;/p&gt;</code></pre>
+        </div>
+        
+        <div class="note-section">
+            <p><strong>Tip:</strong> To learn more about CSS Float, read our CSS Float Tutorial.</p>
+        </div>
+        
+        <div class="practice-section">
+            <h2>Practice Activity</h2>
+            <p>Try working with HTML images:</p>
+            <ol>
+                <li>Add an image with proper src and alt attributes</li>
+                <li>Resize an image using the style attribute</li>
+                <li>Create an image that acts as a link</li>
+                <li>Use CSS float to position an image beside text</li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}
