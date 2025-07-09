@@ -1,2 +1,5 @@
 Flask
 gunicorn
+Flask_SQLAlchemy
+Jinja2
+Werkzeug
