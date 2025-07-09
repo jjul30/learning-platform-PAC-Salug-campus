@@ -1,10 +1,7 @@
-from flask import Flask, render_template
 
-app = Flask(__name__)
+from app import create_app
 
-@app.route('/')
-def home():
-    return "Welcome to PAC Salug Campus Learning Platform!"
+app = create_app()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
